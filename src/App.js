@@ -8,12 +8,13 @@ import Menu from './Components/Menu';
 import { Route,Routes } from 'react-router-dom';
 import Header from './Components/Header';
 import EarnTemplate from './Components/EarnTemplate';
+import EarnDinamic from './Components/EarnDinamic';
 
 
 function App() {
   
   return (
-    <div className='container'>
+    <div className='container-all'>
       <Menu />
       <div className='container-right'>
         <Header />
@@ -21,8 +22,9 @@ function App() {
           <Routes>
             <Route path="/" element={<Home/>} />
             <Route path="/vote" element={<Vote />} />
-            <Route path="/earn-strategies" element={<EarnStrategies />} />
+            {/* <Route path="/earn-strategies/weekly4" element={<EarnStrategies />} /> */}
             <Route path="/collection" element={<Collection />} />
+            <Route path="/earn-strategies/:name" element={<EarnDinamic />} />
           </Routes>
         </div>
       </div>

@@ -1,8 +1,8 @@
-import React from 'react'
+import React, { useEffect, useRef } from 'react'
 import {FaUserAlt} from "react-icons/fa"
 import Button2 from './Button2'
 
-const EarnTemplate = ({strategy,risk,pool,min,max,token}) => {
+const EarnTemplate = ({strategy,risk,pool,min,max,token,progress}) => {
 
     const tableData = [
         {
@@ -238,6 +238,20 @@ const EarnTemplate = ({strategy,risk,pool,min,max,token}) => {
 
     ]
 
+    const bar = useRef()
+    const poolSize = parseFloat(pool)
+    const progressParse = parseFloat(progress)
+
+
+    
+    const percent = progressParse * 100 / poolSize + "%"
+
+    console.log(percent)
+
+    useEffect(()=>{
+        bar.current.style.width= `${percent}`
+    },[progress])
+
   return (
     <div className='earn-strategies'>
         <div className='section-top'>
@@ -249,19 +263,19 @@ const EarnTemplate = ({strategy,risk,pool,min,max,token}) => {
                 <div className='strategies-txt-details'>
                     <h4>Strategy type: <span>{strategy}</span></h4>
                     <h4>Risk: <span>{risk}</span></h4>
-                    <h4>Pool size: <span>{pool}</span></h4>
-                    <h4>Min entry: <span>{min}</span></h4>
-                    <h4>Max entry: <span>{max}</span></h4>
+                    <h4>Pool size: <span>{pool} USDT</span></h4>
+                    <h4>Min entry: <span>{min} USDT</span></h4>
+                    <h4>Max entry: <span>{max} USDT</span></h4>
                     <h4>Token: <span>{token}</span></h4>
                 </div>
             </div>
-            <div className='progress'>
+            <div className='progress-section'>
                 <h3><FaUserAlt size={"20px"}/> Progress in Pool</h3>
                 <div className='progress-bar'>
-                    <div className='bar'>
+                    <div ref={bar} className='bar'>
                         
                     </div>
-                    <p className='bar-detail'>21312321</p>
+                    <p className='bar-detail'>{progress}</p>
                 </div>
                 <Button2 txt="Approve"/>
             </div>

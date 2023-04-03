@@ -8,9 +8,25 @@ const Header = ({funct}) => {
 
     const [modal,setModal] = useState(false)
 
+    function disableScroll() {
+        document.body.classList.add("stop-scrolling");
+      }
+      
+      function enableScroll() {
+        document.body.classList.remove("stop-scrolling");
+      }
+
+      console.log()
+
     const toggleModal = ()=>{
         setModal(!modal)
         console.log(modal)
+        if(window.innerWidth<800 && !modal){
+            disableScroll()
+        }else if(window.innerWidth<800 && modal){
+            enableScroll()
+        }
+        
     }
 
 
@@ -20,11 +36,14 @@ const Header = ({funct}) => {
     const setMenu = () =>{
         if(!isOpen){
             setIsOpen(!isOpen)
+            disableScroll()
             setAnimation("aparecer")
             menuRef.current.style.display="flex"
+            
         }
         else{
             setIsOpen(!isOpen)
+            enableScroll()
             setAnimation("desaparecer")
             setTimeout(()=>{menuRef.current.style.display="none"},200)
         }

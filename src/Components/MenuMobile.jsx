@@ -1,11 +1,12 @@
 import React, { useEffect, useRef, useState } from 'react'
-import { NavLink } from 'react-router-dom'
+import { NavLink, Link } from 'react-router-dom'
 import logo from "../Images/logo/logo-benft.png"
 import logoMin from "../Images/logo/logo-min.png"
 import { FaMoneyBillWaveAlt } from 'react-icons/fa';
 import { HiHome } from 'react-icons/hi';
 import { MdHowToVote, MdCollections } from 'react-icons/md';
-import {AiOutlineClose} from "react-icons/ai";
+import {AiOutlineClose, AiOutlineArrowDown} from "react-icons/ai";
+
 
 const MenuMobile = ({closeMenu}) => {
     
@@ -19,46 +20,53 @@ const MenuMobile = ({closeMenu}) => {
         <div className='menu-nav'>
             <NavLink onClick={closeMenu} className='menu-nav-options' to="/"><HiHome size={"20px"}/> Dashboard</NavLink>
             <NavLink onClick={closeMenu} className='menu-nav-options' to="/vote"><MdHowToVote size={"20px"}/> Vote</NavLink>
-            {/* <div>
-                <p className='menu-nav-options'> <FaMoneyBillWaveAlt size={"20px"}/> Earn Strategies</p>
-            </div>
-            <ul className='hidden'>
-                <li>Weekly
-                    <ul className='hidden'>
-                        <li>Weekly 4</li>
-                        <li>Weekly 5</li>
-                    </ul>
-                </li>
-                <li>Montly
-                    <ul className='hidden'>
-                        <li>Montly 1</li>
-                    </ul>
-                </li>
-                <li>Private
-                    <ul className='hidden'>
-                        <li>GH Private</li>
-                        <li>LV Private</li>
-                        <li>Lbank Private</li>
-                        <li>Chip Private</li>
-                        <li>Dale Private</li>
-                        <li>SIV Private</li>
-                        <li>Team Alex</li>
-                    </ul>
-                </li>
-                <li>Vispx
-                    <ul className='hidden'>
-                        <li>Vispx Core</li>
-                        <li>Kickback Pool</li>
-                        <li>BDE ventures</li>
-                        <li>Crystal Tower</li>
-                        <li>XBorg Holders</li>
-                        <li>Xborg Holders 2</li>
-                        <li>SCM</li>
-                        <li>Friends with BeNFT</li>
-                    </ul>
-                </li>
-            </ul> */}
-            <NavLink onClick={closeMenu} className='menu-nav-options' to={`/earn-strategies`}><FaMoneyBillWaveAlt  size={"20px"}/> Earn Strategies</NavLink>
+            
+            <li className=''>
+                        <a href="#submenu2" data-bs-toggle="collapse" class="nav-link px-0 align-middle  ">
+                            <i class="fs-4 bi-bootstrap"></i> <span class="ms-1 d-sm-inline"><FaMoneyBillWaveAlt size={"20px"}/> Earn Strategies <AiOutlineArrowDown/></span></a>
+                        <ul class="collapse nav flex-column ms-1 menu-list w-100" id="submenu2" data-bs-parent="#menu">
+                            <li class="w-100 menu-list-group">
+                                <a href="#submenu3" data-bs-toggle="collapse" class="px-0"> Weekly <AiOutlineArrowDown/></a>
+                                <ul class="collapse nav flex-column ms-3 pb-2" id="submenu3" data-bs-parent="#menu">
+                                    <li className='w-100'><Link onClick={closeMenu} to="/earn-strategies/weekly4"> Weekly 4</Link></li>
+                                    <li className='w-100'>Weekly 5</li>
+                                </ul>
+                            </li>
+                            <li class="w-100 menu-list-group">
+                                <a href="#submenu4" data-bs-toggle="collapse" class="px-0"> Montly <AiOutlineArrowDown/></a>
+                                <ul class="collapse nav flex-column ms-3" id="submenu4" data-bs-parent="#menu">
+                                    <li className='w-100'>Montly 1</li>
+                                </ul>
+                            </li>
+                            <li class="w-100 menu-list-group">
+                                <a href="#submenu5" data-bs-toggle="collapse" class="px-0"> Private <AiOutlineArrowDown/></a>
+                                <ul class="collapse nav flex-column ms-3" id="submenu5" data-bs-parent="#menu">
+                                    <li className='w-100'>GH Private</li>
+                                    <li className='w-100'>LV Private</li>
+                                    <li className='w-100'>Lbank Private</li>
+                                    <li className='w-100'>Chip Private</li>
+                                    <li className='w-100'>Dale Private</li>
+                                    <li className='w-100'>SIV Private</li>
+                                    <li className='w-100'>Team Alex</li>
+                                </ul>
+                            </li>
+                            <li class="w-100 menu-list-group" >
+                                <a href="#submenu6" data-bs-toggle="collapse" class="px-0"> Vispx <AiOutlineArrowDown/></a>
+                                <ul class="collapse nav flex-column ms-3" id="submenu6" data-bs-parent="#menu">
+                                    <li className='w-100'>Vispx Core</li>
+                                    <li className='w-100'>Kickback Pool</li>
+                                    <li className='w-100'>BDE ventures</li>
+                                    <li className='w-100'>Crystal Tower</li>
+                                    <li className='w-100'>XBorg Holders</li>
+                                    <li className='w-100'>Xborg Holders 2</li>
+                                    <li className='w-100'>SCM</li>
+                                    <li className='w-100'>Friends with BeNFT</li>
+                                </ul>
+                            </li>
+                        </ul>
+            </li>
+
+            {/* <NavLink onClick={closeMenu} className='menu-nav-options' to={`/earn-strategies`}><FaMoneyBillWaveAlt  size={"20px"}/> Earn Strategies</NavLink> */}
             <NavLink onClick={closeMenu} className='menu-nav-options' to="/collection"><MdCollections size={"20px"}/> Collection</NavLink>
         </div>
     </div>
