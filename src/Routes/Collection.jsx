@@ -8,7 +8,6 @@ import Button2 from '../Components/Button2'
 const Collection = () => {
     const [select, setSelect] = useState(0)
     const ref0 = useRef()
-    const ref1 = useRef()
     const itemsCollection = [
         {   
             image: card1,
@@ -42,7 +41,6 @@ const Collection = () => {
 
   return (
     <div>
-      {/* <h1>Collection</h1> */}
       <div className='container-route collection'>
         <div className='bg-collection'>
             {
@@ -61,7 +59,6 @@ const Collection = () => {
                         <h3>{item.tittle}</h3>
                         <p>{item.description}</p>
                         <Button2 txt={item.state}/>
-                        {/* <button>{}</button> */}
                     </div>
                 </div>
 

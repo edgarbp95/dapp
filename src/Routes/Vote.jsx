@@ -6,7 +6,6 @@ const Vote = () => {
 
   return (
     <div >
-      {/* <h1>Vote</h1> */}
         <div className='container-route votes'>
             <div className='votes-left'>
                 <h3>Votes</h3>

@@ -10,10 +10,7 @@ const Slider = () => {
     const slideRight = useRef()
     const slideLeft = useRef()
     const sliderContainer = useRef()
-    // let slidesLength = slideRight.length
-    // console.log(slideRight.current)
-    // const slidesLength = slideRight.current.childElementCount
-    // slideLeft.current.style.top = `-${(3 - 1) * 100}vh`
+    
     useEffect(()=>{
         slideRight.current.style.top = `-${(3 - 1) * sliderContainer.current.clientHeight}px`
     },[])

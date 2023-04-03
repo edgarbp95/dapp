@@ -1,9 +1,13 @@
 import React from 'react'
 
-const Button2 = ({txt}) => {
+const Button2 = ({txt,link}) => {
+
+  // href={`${link}`} target='_blank'
   return (
     <button className="btn2">
-    {txt}
+      <a >
+        {txt}
+      </a>
     </button>
   )
 }

@@ -8,7 +8,7 @@ import Menu from './Components/Menu';
 import { Route,Routes } from 'react-router-dom';
 import Header from './Components/Header';
 import EarnTemplate from './Components/EarnTemplate';
-import EarnDinamic from './Components/EarnDinamic';
+import EarnDinamic from './Routes/EarnDinamic';
 
 
 function App() {

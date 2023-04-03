@@ -1,6 +1,6 @@
 import React from 'react'
 import { useParams } from 'react-router-dom'
-import EarnTemplate from './EarnTemplate'
+import EarnTemplate from '../Components/EarnTemplate'
 
 const EarnDinamic = () => {
 
@@ -18,12 +18,7 @@ const EarnDinamic = () => {
 
     const {name} = useParams()
 
-    
-
     const pool = poolBackend.filter(pool=> pool.name == name)
-
-    
-
 
   return (
     <div>

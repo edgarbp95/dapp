@@ -295,8 +295,8 @@ const EarnTemplate = ({strategy,risk,pool,min,max,token,progress}) => {
                 </tr>
                 </thead>
                 <tbody>
-                {tableData.map((item)=>(
-                    <tr>
+                {tableData.map((item,id)=>(
+                    <tr key={id}>
                     <td>{item.id}</td>
                     <td>{item.date}</td>
                     <td>{item.token}</td>

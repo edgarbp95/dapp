@@ -33,12 +33,9 @@ html {
 body{
     font-family: ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
     font-feature-settings: normal;
-    // background-image: url("https://img.freepik.com/vector-gratis/fondo-geometrico-abstracto-lineas-negras_1017-31900.jpg?w=1380&t=st=1680445426~exp=1680446026~hmac=94269cdf80749a5c446906bee271b81c09f1016462fd9777ad5d5b64140473e6");
     background-image: url("https://i.ibb.co/cxpWP6v/bg.jpg");
     background-repeat: no-repeat;
     background-size: cover;
-
-
 }
 
 a{
@@ -48,14 +45,12 @@ a{
 
 .stop-scrolling {
     height: 100%;
-    overflow: hidden;
-    
+    overflow: hidden;   
 }
 
 .container-all{
     display: flex;
     
-
     .menu{
         display: flex;
         flex-direction: column;
@@ -65,15 +60,12 @@ a{
         color: white;
         background-color: #121312a6;
         backdrop-filter: blur(10px);
-        // border-radius: 0 80px 80px 0;
         overflow-x: hidden;
         overflow-y: scroll;
         &::-webkit-scrollbar {
             display: none;
         }
         
-
-        // width: 15%;
         padding: 40px 35px;
         gap: 50px;
 
@@ -87,7 +79,6 @@ a{
         .menu-nav{
             display: flex;
             flex-direction: column;
-            // background-color: var(--gray);
             height: fit-content;
             gap: 20px;
             justify-content: center;
@@ -108,10 +99,8 @@ a{
         height: 100vh;
         background-color:#121312fa;
         position: sticky;
-        color: white;
-        // background-color: white;
+        color: white;       
         backdrop-filter: blur(10px);
-        // border-radius: 0 80px 80px 0;
         position: absolute;
         top: 0;
         left: 0;
@@ -119,11 +108,6 @@ a{
         right: 0;
         z-index: 9999;
         overflow-y: scroll;
-        // &::-webkit-scrollbar {
-        //     display: none;
-        // }
-
-        // width: 15%;
         padding: 40px 50px;
         gap: 50px;
 
@@ -142,7 +126,6 @@ a{
         .menu-nav{
             display: flex;
             flex-direction: column;
-            // background-color: var(--gray);
             height: fit-content;
             gap: 20px;
             justify-content: center;
@@ -163,21 +146,8 @@ a{
         flex-direction: column;
         gap: 50px;
         height: 100vh;
-        // overflow: hidden;
         overflow-y: scroll;
-        // background: linear-gradient(
-        //     90deg,
-        //     hsl(120deg 3% 7%) 1%,
-        //     hsl(160deg 7% 18%) 50%,
-        //     hsl(201deg 10% 28%) 50%,
-        //     hsl(160deg 7% 18%) 50%,
-        //     hsl(120deg 3% 7%) 99%
-        //     );
-        // background-color: var(--dark);
-        // background-image: url("https://img.freepik.com/foto-gratis/fondo-estilo-papel-negro-3d-moderno_24972-2020.jpg?w=1380&t=st=1680444675~exp=1680445275~hmac=b49c4b28fddeccf66c82baf56a04c04c2a412c327b6bded6819bf2af64a68598");
-        background-color: #1213125d;
-        
-        
+        background-color: #1213125d;      
         backdrop-filter: blur(10px);
         
         .header{
@@ -187,8 +157,7 @@ a{
             height: 10vh;
             align-items: center;
             padding-right: 50px;
-            // padding-left: 50px;
-            // flex-direction: column;
+            
             button{
                 margin-top: 15px;
                 cursor: pointer;
@@ -198,17 +167,11 @@ a{
                 display: none;
             }
 
-            // .logo{
-            //     height: 70px;
-                
-            // }
-
             .modal-header{
                 color: white;
                 position: absolute;
                 top: 100px;
                 background-color: rgba(128, 128, 128, 0.411) ;
-                // padding: px 0;
                 width: 170px;
                 border-radius: 5px;
                 backdrop-filter: blur(20px);
@@ -244,9 +207,6 @@ a{
                             transition: 0.2s linear;
                             
                             &:hover{
-                                // border-bottom: 2px solid var(--blue-w);
-                                // background-color: white;
-                    
                                 background-color: var(--blue-opa);
                                 border-radius: 5px;
                             }
@@ -262,15 +222,12 @@ a{
                 color: white;
                 font-size: 40px;
                 text-transform: uppercase;
-                padding-bottom: 20px;
-    
+                padding-bottom: 20px;   
             }
-
-        
+       
             .container-route{
                 max-width: 1200px;
                 margin: 0 auto;
-
             }
 
             .container-cards{
@@ -281,14 +238,12 @@ a{
                 .container-cards-item{
                     width: 300px;
                     height: 200px;
-                    // background-color: rgba(128, 128, 128, 0.274);
                     background-color: var(--blue-w);
                     border-radius: 10px;
                     position: relative;
                     display: flex;
                     justify-content: center;
                     align-items: center;
-
                     clip-path: polygon(96% 0, 100% 11%, 100% 35%, 100% 63%, 100% 92%, 92% 100%, 69% 100%, 7% 100%, 0 92%, 0 0);
 
                     &::before{
@@ -302,9 +257,7 @@ a{
                         height: 96%;
                         z-index: -1;
                         top: 4px;
-                        left: 4px;
-                        // filter: blur(3px);
-
+                        left: 4px;                    
                     }
 
                     h2{
@@ -333,21 +286,16 @@ a{
                 .votes-left{
                     width: 50%;
                     height: 400px;
-                    // background-color: rgba(255, 255, 255, 0.05);
-                    // background-color: var(--blue-w);
                     backdrop-filter: blur(4px);
                     padding: 30px;
                     border-radius: 10px;
-                    position: relative;
-                    // background: #07182E;
+                    position: relative;                    
                     clip-path: polygon(96% 0, 100% 11%, 100% 35%, 100% 63%, 100% 92%, 92% 100%, 69% 100%, 7% 100%, 0 92%, 0 0);
                     color: white;
                     overflow: hidden;
                     z-index: 999;
                     display: flex;
                     flex-direction: column;
-                    // justify-content: center;
-
 
                     h3{
                         font-size: 30px;
@@ -398,23 +346,8 @@ a{
                         z-index: -1;
                         clip-path: polygon(96% 0, 100% 11%, 100% 35%, 100% 63%, 100% 92%, 92% 100%, 69% 100%, 7% 100%, 0 92%, 0 0);
                         background-color:#232a2d;
-                        // backdrop-filter: blur(20px);
                       }
 
-
-                    // &::before{
-                    //     content: "";
-                    //     position: absolute;
-                    //     border-radius: 10px;
-                    //     clip-path: polygon(96% 0, 100% 11%, 100% 35%, 100% 63%, 100% 92%, 92% 100%, 69% 100%, 7% 100%, 0 92%, 0 0);
-                    //     background-color: #121312e0;
-                    //     backdrop-filter: blur(4px);
-                    //     width: 98%;
-                    //     height: 98%;
-                    //     z-index: -1;
-                    //     top: 4px;
-                    //     left: 4px;
-                    // }
                 }
 
                 .votes-right{
@@ -429,8 +362,6 @@ a{
                     margin-left: 30px;
                     clip-path: polygon(96% 0, 100% 11%, 100% 35%, 100% 63%, 100% 92%, 92% 100%, 69% 100%, 7% 100%, 0 92%, 0 0);
 
-
-
                     &::before{
                         content: "";
                         position: absolute;
@@ -443,10 +374,7 @@ a{
                         z-index: -1;
                         top: 4px;
                         left: 4px;
-                        // filter: blur(3px);
-
                     }
-
 
                     h3{
                         font-size: 30px;
@@ -455,23 +383,8 @@ a{
                         span{
                             color: var(--blue-w);
                         }
-                    }
-
-                    // &::before{
-
-                    //     content: "";
-                    //     height: 250px;
-                    //     width: 40px;
-                    //     background-color: var(--blue-w);
-                    //     position: absolute;
-                    //     left: -33px;
-                    //     top: 45px;
-                    //     /* border-radius: 0 0 0 30px; */
-                    //     clip-path: polygon(0 7%, 100% 0, 100% 100%, 0 93%);
-
-                    // }
+                    }             
                 }
-
             }
 
             .collection{
@@ -485,15 +398,12 @@ a{
                     img{
                         width: 100%;
                     }
-
                     &::before{
                         content: "";
                         position: absolute;
                         width: 100%;
                         height: 150px;
-                        bottom: 0;
-                        // background: rgb(18,19,18);
-                        // background: linear-gradient(180deg, rgba(18,19,18,0) 15%, rgba(18,19,18,0.6811099439775911) 45%, rgba(18,19,18,0.8995973389355743) 74%);
+                        bottom: 0;                    
                         background: rgb(18,19,18);
                         background: linear-gradient(180deg, rgba(18,19,18,0) 15%, rgba(18,19,18,0.6811099439775911) 45%, rgba(18,19,18,0.8995973389355743) 74%, rgba(18,19,18,1) 100%);
 
@@ -506,8 +416,7 @@ a{
 
                     .item-collection{
                         height: 250px;
-                        width: 230px;
-                        // background-color: white;
+                        width: 230px;                      
                         border-radius: 20px;
                         color: white;
                         transition: 0.3s linear;
@@ -519,7 +428,6 @@ a{
                             width: 100%;
                             border-radius: 20px;
                             height: 92%;
-                            // background-color: var(--blue-t);
                             background-color: var(--dark-gray);
                             bottom: 14px;
                             left: 5px;
@@ -543,10 +451,7 @@ a{
                             width: 100%;
                             border-radius: 10px;
                             position: relative;
-                            // padding-bottom: 20px;
-
                         }
-
 
                         button{
                             border: none;
@@ -556,7 +461,6 @@ a{
                             color: white;
                             border-radius: 5px;
                             cursor: pointer;
-
                         }
 
                     }
@@ -565,7 +469,6 @@ a{
 
                     }
                 }
-
             }
 
             .earn-strategies{
@@ -592,27 +495,18 @@ a{
                         border-collapse: collapse;
                         width: 100%;
 
-
                         th{
                              border-bottom: 2px solid var(--blue-t);
                              padding-bottom: 0.5rem;
                          }
                          td{
                              border-bottom: 1px solid white;
-                             // border-right: 1px solid white;
                              padding: 0.5rem 0.5rem;
                              border-color: inherit;
                          }
-
-
-
-
                     }
                 }
-
-
             }
-
 
             .strategies{
                 position: relative;
@@ -624,7 +518,6 @@ a{
                 margin-left: 20px;
 
                 &::before{
-
                     content: "";
                     height: 300px;
                     width: 40px;
@@ -632,9 +525,7 @@ a{
                     position: absolute;
                     left: -33px;
                     top: 60px;
-                    /* border-radius: 0 0 0 30px; */
                     clip-path: polygon(0 7%, 100% 0, 100% 100%, 0 93%);
-
                 }
 
 
@@ -643,20 +534,17 @@ a{
                     text-align: center;
                     width: 100%;
                     padding-top: 25px;
-                    // border: 1px solid var(--gray);
                     p{
                         letter-spacing: 5px;
                         color: var(--blue-w);
                     }
                     h3{
                         font-size: 40px;
-
                     }
                 }
 
                 .strategies-txt-details{
                     width: 100%;
-                    // border: 1px solid var(--gray);
                     padding: 30px 50px;
                     display: flex;
                     flex-direction: column;
@@ -685,8 +573,6 @@ a{
                 .progress-bar{
                     width: 100%;
                     height: 40px;
-                    // background-color: white;
-                    // border: 5px solid ;
                     border-radius: 20px;
                     position: relative;
                     display: flex;
@@ -711,8 +597,6 @@ a{
                         top: 5px;
                     }
                 }
-
-
             }
         }
 
@@ -773,12 +657,10 @@ a{
 
   #leftArrow {
     left: -7.5%;
-    /* -webkit-clip-path: polygon(100% 0, 100% 100%, 0 50%); */
     clip-path: polygon(0 29%, 100% 0, 100% 100%, 0 73%);
   }
 
   #rightArrow {
-    /* -webkit-clip-path: polygon(100% 49%, 0 0, 0 100%); */
     left: 102%;
     clip-path: polygon(0 0, 100% 29%, 100% 73%, 0 100%);
   }
@@ -934,8 +816,6 @@ a{
         }
   }
 
-
-
   .left-slide h1 {
     font-size: 30px !important;
     margin-bottom: 10px;
@@ -991,13 +871,10 @@ a{
     height: 55px;
     clip-path: polygon(0 30%, 100% 0, 100% 100%, 0 100%);
     background-color: whitesmoke;
-    // position: relative;
-
     svg{
         transform: translate(-7px, 7px);
         ;
     }
-
   }
 
   .slider-container .action-buttons .up-button {
@@ -1008,7 +885,6 @@ a{
     height: 55px;
     clip-path: polygon(0 0, 100% 0%, 100% 70%, 0 100%);
     background-color: whitesmoke;
-
     svg{
         transform: translateX(-6px);
     }
@@ -1034,7 +910,6 @@ a{
     width: 160px;
     height: 40px;
     color: var(--color);
-      /* use position: relative; so that BG is only for .btn */
     position: relative;
     isolation: isolate;
     display: inline-grid;
@@ -1044,18 +919,12 @@ a{
     border: 0;
     text-transform: uppercase;
     box-shadow: 10px 10px 20px rgba(0, 0, 0, .6);
-    clip-path: polygon(
-              /* Top-left */
+    clip-path: polygon(        
               0% var(--curve-size),
-
-              var(--curve-size) 0,
-              /* top-right */
+              var(--curve-size) 0,              
               100% 0,
-              100% calc(100% - var(--curve-size)),
-
-              /* bottom-right 1 */
-              calc(100% - var(--curve-size)) 100%,
-              /* bottom-right 2 */
+              100% calc(100% - var(--curve-size)),             
+              calc(100% - var(--curve-size)) 100%,             
               0 100%);
     transition: color 250ms;
   }
@@ -1091,30 +960,27 @@ a{
   .btn2::after {
     background: var(--bg);
     z-index: -1;
-    clip-path: polygon(
-              /* Top-left */
+    clip-path: polygon(        
               var(--border-width)
               calc(var(--curve-size) + var(--border-width) * .5),
 
               calc(var(--curve-size) + var(--border-width) * .5) var(--border-width),
 
-              /* top-right */
               calc(100% - var(--border-width))
               var(--border-width),
 
               calc(100% - var(--border-width))
               calc(100% - calc(var(--curve-size) + var(--border-width) * .5)),
 
-              /* bottom-right 1 */
               calc(100% - calc(var(--curve-size) + var(--border-width) * .5)) calc(100% - var(--border-width)),
-              /* bottom-right 2 */
+
               var(--border-width) calc(100% - var(--border-width)));
     transition: clip-path 500ms;
   }
 
   .btn2:where(:hover, :focus)::after {
     clip-path: polygon(
-                  /* Top-left */
+ 
                   calc(100% - var(--border-width))
 
                   calc(100% - calc(var(--curve-size) + var(--border-width) * 0.5)),
@@ -1123,7 +989,6 @@ a{
 
                   var(--border-width),
 
-                  /* top-right */
                   calc(100% - var(--border-width))
 
                    var(--border-width),
@@ -1132,11 +997,9 @@ a{
 
                   calc(100% - calc(var(--curve-size) + var(--border-width) * .5)),
 
-                  /* bottom-right 1 */
                   calc(100% - calc(var(--curve-size) + var(--border-width) * .5))
                   calc(100% - var(--border-width)),
 
-                  /* bottom-right 2 */
                   calc(100% - calc(var(--curve-size) + var(--border-width) * 0.5))
                   calc(100% - var(--border-width)));
     transition: 200ms;
@@ -1150,8 +1013,7 @@ a{
     transition: 0.3s linear;
     animation: aparecer 0.2s linear;
     svg{
-        color: var(--blue-w);
-               
+        color: var(--blue-w);               
     }
 
     &::after{
@@ -1160,7 +1022,6 @@ a{
         width: 100%;
         height: 45px;
         background-color: rgba(255, 255, 255, 0.096);
-        // background-color: #2c99d42c;
         left: 0;
         margin-top: -12px;
         filter: blur(0px);
@@ -1177,10 +1038,8 @@ a{
         position: absolute;
         left: 0;
         border-radius: 0 10px 10px 0;
-        // clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
     }
   }
-
 
   @keyframes aparecer {
     0%{
@@ -1206,15 +1065,11 @@ a{
   .logo{
     display: flex;
 
-
     .logo-min{
-        // width: 50px;
         height: 60px;
     }
     
   }
-
-
 
   /* menu hamburguesa */
   .hambur{
@@ -1267,7 +1122,6 @@ a{
     100%{
       opacity: 1;
     }
-    
   }
   
   @keyframes desaparecer {
@@ -1278,7 +1132,6 @@ a{
     100%{
       opacity: 0;
     }
-    
   }
   
   .aparecer{
@@ -1304,18 +1157,14 @@ a{
     .container-right{
         height: 100% !important;
     }
-
     .menu{
         display: none !important;
     }
-
     .menu-mobile{
         display: flex !important;
     }
-
     .header{
         justify-content: space-between !important;
-
         .modal-header{
             right: 50px;
             width: 100% !important;
@@ -1326,11 +1175,8 @@ a{
             right: 0 !important;
             background-color: rgba(24, 23, 23, 0.842) !important;
             color:#050505 !important;
-            // align-items: center;
             justify-content: center;
-
-            
-            
+           
             ul{
                 background-color: rgba(255, 255, 255, 0.37) !important;
                 width: 300px !important;
@@ -1342,10 +1188,7 @@ a{
                 .close{
                     position: absolute !important;
                     top: 30px !important;
-                    right: 30px !important;
-
-                    
-                    
+                    right: 30px !important;             
                 }
                 
                 li{
@@ -1361,8 +1204,6 @@ a{
 
     .container-routes{
         padding: 0 20px !important;
-
-    
 
        .slider-container{
         display: none;
@@ -1408,7 +1249,6 @@ a{
                     left: -15px !important;
                 }
 
-
                 .strategies-txt{                    
                                       
                     p{
@@ -1442,8 +1282,6 @@ a{
 
         .progress{         
             width: 90% !important;
-
-            
 
             .progress-bar{
                 .bar-detail{                      
@@ -1482,8 +1320,6 @@ a{
                     display: none;
                 }
 
-        
-
             }
             .collection-active{
                 transform: translateY(-5px) !important;
@@ -1498,7 +1334,6 @@ a{
   @media only screen and (min-width:801px) and (max-width:1025px){
 
     .menu{
-        // padding: 40px 20px 40px 30px !important;
         width: 290px;
     }
 
@@ -1508,8 +1343,6 @@ a{
         width: 100% !important;
         height: 300px;
         border-radius: 10px;
-
-        
 
         .left-slide div{
             padding: 0 25px !important;
@@ -1544,7 +1377,6 @@ a{
             h2{
                 font-size: 20px ;
             }
-
         }
     }
 
@@ -1579,7 +1411,6 @@ a{
                 left: -15px !important;
             }
 
-
             .strategies-txt{                    
                                   
                 p{
@@ -1605,11 +1436,7 @@ a{
             }
 
         }
-
-        
     }
-
-    
 
     .progress{         
         width: 100% !important;
@@ -1627,7 +1454,6 @@ a{
         overflow-x: scroll;
     }
 
-
     .item-collection{
         height: 100% !important;
         margin-bottom: 50px;
@@ -1642,7 +1468,6 @@ a{
 
   @media only screen and (min-width:1026px) and (max-width:1350px){
     .menu{
-        // padding: 40px 15px 40px 30px !important;
         width: 290px;
     }
 
@@ -1652,8 +1477,6 @@ a{
         width: 100% !important;
         height: 300px;
         border-radius: 10px;
-
-        
 
         .left-slide div{
             padding: 0 25px !important;
@@ -1672,8 +1495,7 @@ a{
         gap: 20px !important;
         }
         
-        .strategies-txt{                    
-                                  
+        .strategies-txt{                       
             p{
                 letter-spacing: 2px !important;
                 font-size: 16px !important;
@@ -1695,13 +1517,11 @@ a{
 
   }
 
-
   .menu-1st-level{
     padding: 10px 0;
     display: flex;
     flex-direction: column;
     gap: 10px;
-    // text-align: center;
   }
 
   .menu-2st-level{
@@ -1709,20 +1529,14 @@ a{
     flex-direction: column;
   }
 
-
-
   .menu-list{
-    // border: 1px solid white;
-    // border-radius: 5px;
     position: relative;
     padding: 10px;
-    // background-color:rgba(255, 255, 255, 0.096);
     width: 100%;
     margin-top: 10px;
     gap: 10px;
     transition: 0s ease;
     
-
     &::before{
         content: "";
         width: 200%;
@@ -1744,13 +1558,37 @@ a{
             cursor: pointer;
             padding-bottom: 10px;
             &:hover{
+              color: var(--blue-l);
+            }
+            a{
+              transition: 0.2s linear;
+            &:hover{
                 color: var(--blue-l);
             }
+          }
         }
-        
     }
   }
 
-  
+  .menu-nav-dropdown{
+    display: flex;
+  }
 
-  
+  .comunity{
+    margin-bottom: 0;
+    margin-top: auto;
+    
+    .comunity-grid{ 
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 10px;
+      justify-items: center;
+        a{
+          transition: 0.2s linear;
+          
+          &:hover{
+            color: var(--blue-l);
+          }
+        }
+    }
+  }
