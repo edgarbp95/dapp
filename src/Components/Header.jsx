@@ -2,6 +2,7 @@ import React, { useRef, useState } from 'react'
 import Button from './Button'
 import logoMin from "../Images/logo/logo-min.png"
 import MenuMobile from './MenuMobile'
+import {AiOutlineClose} from "react-icons/ai";
 
 const Header = ({funct}) => {
 
@@ -42,7 +43,11 @@ const Header = ({funct}) => {
       <Button funct={toggleModal}/>
 
         <div className={`modal-header ${!modal ? "hidden" : "visible"}`} >
+            
             <ul>
+                <div className='close'>
+                    <AiOutlineClose onClick={toggleModal} size={"20px"} color={"#FFFFFF"}/>
+                </div>
                 <li>
                     <a href="">Metamask</a></li>
                 <li>
