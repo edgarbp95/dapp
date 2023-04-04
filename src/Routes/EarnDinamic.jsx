@@ -20,8 +20,7 @@ const EarnDinamic = () => {
     const {name} = useParams()
 
     const pool = poolBackend.filter(pool=> pool.name == name)
-    const pool2 = poolBackend.filter(pool=> pool.name == "hola")
-    console.log(pool == "" ? "hola" : "no existe")
+    
 
   return (
     <div>
