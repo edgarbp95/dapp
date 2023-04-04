@@ -104,7 +104,7 @@ const EarnTemplate = ({strategy,risk,pool,min,max,token,progress}) => {
                 </div>
                 <button className='btn2'>
                     <p className='text-button-remaining'>
-                        <span id="days">{days}</span> days / <span id="hours">{hours}</span> hours / <span id="minutes">{minutes}</span> minutes / <span id="seconds">{seconds}</span> seconds
+                        <span id="days">{days}</span> days / <span id="hours">{hours}</span> hours / <span id="minutes">{minutes}</span> minutes / <span id="seconds">{seconds}</span> seconds to Claim
                     </p>
                 </button>
 
