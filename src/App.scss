@@ -33,7 +33,7 @@ html {
 body{
     font-family: ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
     font-feature-settings: normal;
-    background-image: url("https://i.ibb.co/cxpWP6v/bg.jpg");
+    background-image: url("./Images/bg-body.jpg");
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -413,26 +413,28 @@ a{
                 .container-collection{
                     display: flex;
                     gap: 20px;
+                    padding-bottom: 50px;
 
                     .item-collection{
-                        height: 250px;
+                        // height: 250px;
                         width: 230px;                      
                         border-radius: 20px;
                         color: white;
                         transition: 0.3s linear;
                         position: relative;
+                        
 
-                        &::before{
-                            content: "";
-                            position: absolute;
-                            width: 100%;
-                            border-radius: 20px;
-                            height: 92%;
-                            background-color: var(--dark-gray);
-                            bottom: 14px;
-                            left: 5px;
-                            filter: blur(4px);
-                        }
+                        // &::before{
+                        //     content: "";
+                        //     position: absolute;
+                        //     width: 100%;
+                        //     border-radius: 20px;
+                        //     height: 92%;
+                        //     background-color: var(--dark-gray);
+                        //     bottom: 14px;
+                        //     left: 5px;
+                        //     filter: blur(4px);
+                        // }
 
                         .item-collection-txt{
                             display: flex;
@@ -442,7 +444,7 @@ a{
                             padding-top: 20px;
                             justify-content: center;
                             align-items: center;
-
+                            text-align: center;
                             p{
                                 text-align: center;
                             }
@@ -451,6 +453,7 @@ a{
                             width: 100%;
                             border-radius: 10px;
                             position: relative;
+                            box-shadow: 3px 4px 5px #40494e28;
                         }
 
                         button{
@@ -579,12 +582,30 @@ a{
                     padding: 5px 8px;
                     background-color: var(--gray);
 
+                    .min{
+                      position: absolute;
+                      z-index:5;
+                      left: 20px;
+                      top: 7px;
+                      opacity: 0.7;
+                    }
+                    
+                    .max{
+                      position: absolute;
+                      z-index: 5;
+                      right: 20px;
+                      top: 7px;
+                      opacity: 0.7;
+                    }
+
                     .bar{
                         height: 100%;
                         width: 80%;
                         border-radius: 20px;
-                        background: linear-gradient(-45deg, var(--blue-l), var(--blue-t), var(--blue-t));
+                        background: linear-gradient(-45deg, var(--blue-l), var(--blue-t), var(--blue-l));
                         z-index: 1;
+                        animation: gradient 4s ease infinite;
+                        background-size: 300% 100%;
                     }
                     .bar-detail{                       
                         position: absolute;
@@ -907,8 +928,8 @@ a{
     --color: var(--blue-w);
     backdrop-filter: blur(10px);
     cursor: pointer;
-    width: 160px;
-    height: 40px;
+    min-width: 160px;
+    min-height: 40px;
     color: var(--color);
     position: relative;
     isolation: isolate;
@@ -1329,6 +1350,16 @@ a{
         }
     }
 
+    .details-staked-input{
+      
+      div{
+        flex-direction: column;
+
+        .input-deposit{
+          width: 100%;
+        }
+      }
+    }
 
   }
 
@@ -1593,3 +1624,126 @@ a{
         }
     }
   }
+
+  @keyframes gradient {
+    0% {
+        background-position: 0% 50%; 
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+ input[type=number]::-webkit-inner-spin-button,
+ input[type=number]::-webkit-outer-spin-button {
+     -webkit-appearance: none;
+     margin: 0;
+     }
+ input[type=number]{ -moz-appearance:textfield; }
+
+
+ .details-staked-input{
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+    div{
+      display: flex;
+      gap: 20px;
+    }
+    p{
+      color: rgba(255, 255, 255, 0.637);
+      
+      font-size: 14px;
+      span{
+        color: white;
+      }
+    }
+ }
+
+.input-deposit{
+  height: 40px;
+  background: var(--blue-deg);
+  border: none;
+  color: white;
+  text-align: center;
+  width: 200px;
+  font-weight: 600;
+
+  &:focus{
+    border: 2px solid var(--blue-t);
+    outline: none;
+  }
+}
+
+.table-staked{
+  width: 100%;
+  height: 220px;
+  background-color: rgba(255, 255, 255, 0.05);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  
+
+  &::before{
+    content: ""; 
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url("");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    z-index: -1;
+  }
+
+      .row1{
+        border-bottom: 1px solid var(--blue-deg);
+      }
+
+    .table-row{
+      height: 100px;
+      // border: 1px solid white;
+      display: flex;
+      align-items: center;
+      width: 100%;
+      
+      
+
+      // padding: 0 15px;
+      backdrop-filter: blur(5px);
+      div{
+        border-right: 1px solid var(--blue-deg);
+        
+        height: 100%;
+        display: flex;
+        align-items: center;
+        padding-left: 20px;
+        width: 200px;
+      }
+      h3{
+        font-size: 15px;
+        margin-bottom: 0;
+        font-weight: 400;
+      }
+
+      .table-number{
+        font-weight: 400;
+        font-size: 15px;
+        color: rgba(255, 255, 255, 0.637);
+        width: 100%;
+        margin-bottom: 0;
+        padding-left: 20px;
+      }
+    }
+}
+
+.text-button-remaining{
+  margin-bottom: 0;
+  font-size: 15px;
+}
