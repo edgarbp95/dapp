@@ -10,12 +10,7 @@ import { FaYoutube, FaTelegramPlane, FaTwitter, FaLinkedin, FaMediumM  } from 'r
 import { AiFillInstagram } from 'react-icons/ai';
 
 const Menu = () => {
-    const [menu, setMenu] = useState(true)
-    const [weekly, setWeekly] = useState(true)
-    const [montly, setMontly] = useState(true)
-    const [privates, setPrivates] = useState(false)
-    const [vispx, setVispx] = useState(false)
-    
+        
   return (
     <div className='menu'>
         <div className='logo'>
