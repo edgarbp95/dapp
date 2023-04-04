@@ -2,14 +2,12 @@ import React, { useRef, useState } from 'react'
 import Button from './Button'
 import logoMin from "../Images/logo/logo-min.png"
 import MenuMobile from './MenuMobile'
-import {AiOutlineClose} from "react-icons/ai";
-import metamaskLogo from "../Images/icons/metamask.png.png"
-import walletConnect from "../Images/icons/wallet-connect.png"
-import trustWallet from "../Images/icons/trust-wallet.svg"
 
-const Header = ({funct}) => {
 
-    const [modal,setModal] = useState(false)
+
+const Header = ({toggleModal}) => {
+
+    
 
     function disableScroll() {
         document.body.classList.add("stop-scrolling");
@@ -21,16 +19,7 @@ const Header = ({funct}) => {
 
       console.log()
 
-    const toggleModal = ()=>{
-        setModal(!modal)
-        console.log(modal)
-        if(window.innerWidth<800 && !modal){
-            disableScroll()
-        }else if(window.innerWidth<800 && modal){
-            enableScroll()
-        }
-        
-    }
+
 
 
     const [isOpen, setIsOpen] = useState(false);
@@ -62,24 +51,7 @@ const Header = ({funct}) => {
             </div>
         </div>
 
-      <Button funct={toggleModal}/>
-
-        <div className={`modal-header ${!modal ? "hidden" : "visible"}`} >
-            
-            <ul>
-                <div className='close'>
-                    <AiOutlineClose onClick={toggleModal} size={"20px"} color={"#FFFFFF"}/>
-                </div>
-                <li>
-                    <a href=""><img className='icon-wallets metamask' src={metamaskLogo} alt="logo metamask" /> Metamask</a></li>
-                <li>
-                    <a href=""><img className='icon-wallets trust-wallet' src={trustWallet} alt="logo trust wallet" /> Trust Wallet</a>
-                </li>
-                <li>
-                    <a href=""><img className='icon-wallets wallet-connect' src={walletConnect} alt="logo wallet connect" /> Wallet Connect</a>
-                </li>
-            </ul>
-        </div>
+        <Button funct={toggleModal}/>
 
         <div className={`mobile-menu ${animation}`} ref={menuRef} >
             <MenuMobile closeMenu={setMenu} />
