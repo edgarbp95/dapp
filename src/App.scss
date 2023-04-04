@@ -615,7 +615,8 @@ a{
                         font-weight: 700;
                         font-size: 20px;
                         left: 43%;
-                        top: 5px;
+                        right: 50%;
+                        top: 6px;
                     }
                 }
             }
@@ -1297,12 +1298,10 @@ a{
 
             }
 
-            .progress-section{
-                width: 90% !important;
-            }
+           
         }
 
-        .progress{         
+        .progress-section{         
             width: 90% !important;
 
             .progress-bar{
@@ -1310,6 +1309,8 @@ a{
                     font-size: 18px !important;
                     left: 38% !important;
                     top: 7px !important;
+                    font-size: 18px !important;
+                    
                 }
             }
         }
