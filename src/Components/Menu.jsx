@@ -8,8 +8,50 @@ import { MdHowToVote, MdCollections } from 'react-icons/md';
 import {AiOutlineArrowDown} from "react-icons/ai";
 import { FaYoutube, FaTelegramPlane, FaTwitter, FaLinkedin, FaMediumM  } from 'react-icons/fa';
 import { AiFillInstagram } from 'react-icons/ai';
+import {IoIosArrowDown} from "react-icons/io";
 
 const Menu = () => {
+
+    const [isOpen,setIsOpen] = useState({
+        earn: false,
+        weekly: false,
+        montly: false,
+        private: false,
+        vispx: false
+    })
+    const refActive = useRef()
+    const addActive = () =>{
+        refActive.current.classList.add("active")
+    }
+    const removeActive = () =>{
+        refActive.current.classList.remove("active")
+    }
+
+    
+
+    const toggleEarn = (id)=>{
+        const nEarn = {...isOpen}
+
+        if(id=="earn"){
+            nEarn.earn = !nEarn.earn
+            setIsOpen(nEarn)
+        }else if(id=="weekly"){
+            nEarn.weekly = !nEarn.weekly
+            setIsOpen(nEarn)
+        }else if(id=="montly"){
+            nEarn.montly = !nEarn.montly
+            setIsOpen(nEarn)
+        }else if(id=="private"){
+            nEarn.private = !nEarn.private
+            setIsOpen(nEarn)
+        }else if(id=="vispx"){
+            nEarn.vispx = !nEarn.vispx
+            setIsOpen(nEarn)
+        }
+        
+    }
+
+    console.log(isOpen)
         
   return (
     <div className='menu'>
@@ -18,28 +60,34 @@ const Menu = () => {
             
         </div>
         <div className='menu-nav'>
-            <NavLink className='menu-nav-options' to="/"><HiHome size={"20px"}/> Dashboard</NavLink>
-            <NavLink className='menu-nav-options' to="/vote"><MdHowToVote size={"20px"}/> Vote</NavLink>
+            <NavLink onClick={removeActive} className='menu-nav-options' to="/"><HiHome size={"20px"} color="#9ed0ed"/> Dashboard</NavLink>
+            <NavLink onClick={removeActive} className='menu-nav-options' to="/vote"><MdHowToVote size={"20px"} color="#9ed0ed"/> Vote</NavLink>
             
-            <div className=''>
-                        <a href="#submenu2" data-bs-toggle="collapse" className="nav-link px-0 align-middle menu-nav-dropdown">
-                            <i className="fs-4 bi-bootstrap"></i> <span className="ms-1 d-none d-sm-inline"><FaMoneyBillWaveAlt size={"20px"}/> Earn Strategies <AiOutlineArrowDown/></span></a>
-                        <ul className="collapse nav flex-column ms-1 menu-list w-100" id="submenu2" data-bs-parent="#menu">
+            <div>
+                        <a ref={refActive} onClick={()=>toggleEarn("earn")} href="#submenu2" data-bs-toggle="collapse" className="nav-link px-0 align-middle menu-nav-dropdown">
+                            <span className="ms-1 d-none d-sm-inline"><FaMoneyBillWaveAlt className='me-1' size={"20px"} color="#9ed0ed"/> Earn Strategies <IoIosArrowDown className={`${!isOpen.earn ? "arrow-close" : "arrow-open"}`}/>
+                            {/* <AiOutlineArrowDown className={`${isOpen.earn ? "arrow-close" : "arrow-open"}`}/> */}
+                            </span></a>
+                        <ul className="collapse nav flex-column ms-1 menu-list w-100 pruebita" id="submenu2" data-bs-parent="#menu">
                             <li className="w-100 menu-list-group">
-                                <a href="#submenu3" data-bs-toggle="collapse" className="px-0"> Weekly <AiOutlineArrowDown/></a>
+                                <a onClick={()=>toggleEarn("weekly")} href="#submenu3" data-bs-toggle="collapse" className="px-0"> Weekly <IoIosArrowDown className={`${!isOpen.weekly ? "arrow-close" : "arrow-open"}`}/></a>
                                 <ul className="collapse nav flex-column ms-3 pb-2" id="submenu3" data-bs-parent="#menu">
-                                    <li className='w-100'><Link to="/earn-strategies/weekly4"> Weekly 4</Link></li>
-                                    <li className='w-100'>Weekly 5</li>
+                                    <li className='w-100'>
+                                        <NavLink onClick={addActive} to="/earn-strategies/weekly4"> Weekly 4</NavLink>
+                                    </li>
+                                    <li className='w-100'>
+                                        <NavLink onClick={addActive} to="/earn-strategies/weekly5"> Weekly 5</NavLink>
+                                    </li>
                                 </ul>
                             </li>
                             <li className="w-100 menu-list-group">
-                                <a href="#submenu4" data-bs-toggle="collapse" className="px-0"> Montly <AiOutlineArrowDown/></a>
+                                <a onClick={()=>toggleEarn("montly")} href="#submenu4" data-bs-toggle="collapse" className="px-0"> Montly <IoIosArrowDown className={`${!isOpen.montly ? "arrow-close" : "arrow-open"}`}/></a>
                                 <ul className="collapse nav flex-column ms-3" id="submenu4" data-bs-parent="#menu">
                                     <li className='w-100'>Montly 1</li>
                                 </ul>
                             </li>
                             <li className="w-100 menu-list-group">
-                                <a href="#submenu5" data-bs-toggle="collapse" className="px-0"> Private <AiOutlineArrowDown/></a>
+                                <a onClick={()=>toggleEarn("private")} href="#submenu5" data-bs-toggle="collapse" className="px-0"> Private <IoIosArrowDown className={`${!isOpen.private ? "arrow-close" : "arrow-open"}`}/></a>
                                 <ul className="collapse nav flex-column ms-3" id="submenu5" data-bs-parent="#menu">
                                     <li className='w-100'>GH Private</li>
                                     <li className='w-100'>LV Private</li>
@@ -51,7 +99,7 @@ const Menu = () => {
                                 </ul>
                             </li>
                             <li className="w-100 menu-list-group" >
-                                <a href="#submenu6" data-bs-toggle="collapse" className="px-0"> Vispx <AiOutlineArrowDown/></a>
+                                <a onClick={()=>toggleEarn("vispx")} href="#submenu6" data-bs-toggle="collapse" className="px-0"> Vispx <IoIosArrowDown className={`${!isOpen.vispx ? "arrow-close" : "arrow-open"}`}/></a>
                                 <ul className="collapse nav flex-column ms-3" id="submenu6" data-bs-parent="#menu">
                                     <li className='w-100'>Vispx Core</li>
                                     <li className='w-100'>Kickback Pool</li>
@@ -67,7 +115,7 @@ const Menu = () => {
             </div>
             
             {/* <NavLink className='menu-nav-options' to={`/earn-strategies`}><FaMoneyBillWaveAlt  size={"20px"}/> Earn Strategies</NavLink> */}
-            <NavLink className='menu-nav-options' to="/collection"><MdCollections size={"20px"}/> Collection</NavLink>
+            <NavLink onClick={removeActive} className='menu-nav-options' to="/collection"><MdCollections size={"20px"} color="#9ed0ed"/> Collection</NavLink>
         </div>
 
         <div className='comunity'>

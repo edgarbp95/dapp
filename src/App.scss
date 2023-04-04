@@ -72,9 +72,11 @@ a{
 
 
         .logo-menu{
-            height: 70px;
-            width: 182.50px;
-            margin: 0 auto;
+            height: 83px;
+            width: 220px;
+            margin-left: -25px;
+            // margin: 0 auto;
+
         }
 
         .menu-nav{
@@ -554,6 +556,10 @@ a{
                     flex-direction: column;
                     gap: 10px;
 
+                    .pool-size{
+                      margin-top: 5px;
+                    }
+
                     h4{
                         font-size: 22px;
 
@@ -563,6 +569,11 @@ a{
                             padding-left: 10px;
                         }
                     }
+
+                    .strategies-txt-risk{
+                      display: flex !important;
+                    }
+                    
                 }
 
             }
@@ -1036,7 +1047,7 @@ a{
     transition: 0.3s linear;
     animation: aparecer 0.2s linear;
     svg{
-        color: var(--blue-w);               
+        color: var(--blue-l) !important;               
     }
 
     &::after{
@@ -1363,6 +1374,18 @@ a{
       }
     }
 
+    
+
+  }
+
+
+  @media only screen and (max-width:425px){
+    .info-risk{
+      width: 110px !important;
+      bottom: -5px;
+      left: 24px !important;
+      // background-color: #245b78 !important;
+    }
   }
 
   @media only screen and (min-width:801px) and (max-width:1025px){
@@ -1748,4 +1771,81 @@ a{
 .text-button-remaining{
   margin-bottom: 0;
   font-size: 15px;
+}
+
+
+.strategies-txt-risk{
+  display: flex;
+  // flex-direction: row;
+  width: 100%;
+  
+  h4{
+    // padding: 0 !important;
+    margin-bottom: 0;
+    margin-right: 10px;
+    margin-top: -2px;
+  }
+}
+.question-icon{
+  position: relative;
+  display: flex;
+  // width: 70%;
+  align-items: center;
+  cursor: pointer;
+  transition: 0.3s linear;
+  svg{
+    // margin-bottom: 3px;
+    // margin-left: 10px; 
+    transition: 0.2s linear; 
+
+  }
+
+  &:hover svg{
+    // fill: var(--blue-l);
+    filter: brightness(1.3);
+  }
+
+  &:hover .info-risk{
+    animation: aparecer 0.2s linear;
+    display: flex;
+  }
+
+  .info-risk{
+    display: none;
+    font-size: 10px;
+    position: absolute;
+    width: 200px;
+    text-align: justify;
+    border: 1px solid var(--blue-t);
+    background-color: var(--blue-opa);
+    padding: 5px;
+    border-radius: 10px;
+    left: 30px;
+    margin: 0;
+    transition: 0.3s linear;
+  }
+}
+
+.pruebita .active{
+  color: var(--blue-l) !important;
+  &::after{
+    display: none;
+  }
+  &::before{
+    display: none;
+  }
+}
+
+.arrow-close{
+  transform: rotate(90deg);
+  transition: 0.1s linear;
+}
+
+.arrow-open{
+  transform: rotate(0);
+  transition: 0.1s linear;
+}
+
+.not-found{
+  height: 90vh;
 }

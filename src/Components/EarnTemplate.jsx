@@ -2,7 +2,8 @@ import React, { useEffect, useRef, useState } from 'react'
 import {FaUserAlt} from "react-icons/fa"
 import Button2 from './Button2'
 import Table from './Table'
-
+import {ImQuestion} from "react-icons/im"
+import {BsQuestionLg, BsQuestionSquare} from "react-icons/bs"
 const EarnTemplate = ({strategy,risk,pool,min,max,token,progress}) => {
 
     const [deposit,setDeposit] = useState()
@@ -57,8 +58,16 @@ const EarnTemplate = ({strategy,risk,pool,min,max,token,progress}) => {
                 </div>
                 <div className='strategies-txt-details'>
                     <h4>Strategy type: <span>{strategy}</span></h4>
-                    <h4>Risk: <span>{risk}</span></h4>
-                    <h4>Pool size: <span>{pool} USDT</span></h4>
+                    <div className='strategies-txt-risk'>
+                        <h4>Risk: <span>{risk}</span> 
+                        </h4> 
+                        <div className='question-icon'>
+                            <BsQuestionSquare size={"20px"} color='#245a78'/>
+                            <p className='info-risk'>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+                        </div>
+                        
+                    </div>
+                    <h4 className='pool-size'>Pool size: <span>{pool} USDT</span></h4>
                     <h4>Min entry: <span>{min} USDT</span></h4>
                     <h4>Max entry: <span>{max} USDT</span></h4>
                     <h4>Token: <span>{token}</span></h4>
