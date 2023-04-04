@@ -175,7 +175,7 @@ a{
                 position: absolute;
                 top: 100px;
                 background-color: rgba(128, 128, 128, 0.411) ;
-                width: 170px;
+                width: 250px;
                 border-radius: 5px;
                 backdrop-filter: blur(20px);
                 text-align: center;
@@ -192,7 +192,7 @@ a{
                         .close{
                             position: relative;
                            top: 15px;
-                           right: -50px;
+                           right: -75px;
                            padding-bottom: 15px;
                             
                            svg{
@@ -1848,4 +1848,23 @@ a{
 
 .not-found{
   height: 90vh;
+}
+
+.icon-wallets{
+  position: relative;
+  right: 10px;
+  bottom: 2px;
+
+}
+
+.metamask{
+  height: 25px;
+}
+
+.trust-wallet{
+  height: 25px;
+}
+
+.wallet-connect{
+  height: 20px;
 }
