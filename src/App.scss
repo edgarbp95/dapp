@@ -1414,7 +1414,12 @@ a{
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            gap: 30px;
+            gap: 20px !important;
+            padding: 0 !important;
+            
+            .container-cards-item{
+              height: 180px !important;
+            }
         }
 
         .votes{
