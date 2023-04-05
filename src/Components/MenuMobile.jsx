@@ -55,8 +55,8 @@ const MenuMobile = ({closeMenu}) => {
             <AiOutlineClose onClick={closeMenu} color='#2c98d4' size={"30px"}/>
         </div>
         <div className='menu-nav'>
-            <NavLink onClick={closeMenu} className='menu-nav-options' to="/"><HiHome size={"20px"}/> Dashboard</NavLink>
-            <NavLink onClick={closeMenu} className='menu-nav-options' to="/vote"><MdHowToVote size={"20px"}/> Vote</NavLink>
+            <NavLink onClick={closeMenu} className='menu-nav-options' to="/"><HiHome size={"20px"} color="#9ed0ed"/> Dashboard</NavLink>
+            <NavLink onClick={closeMenu} className='menu-nav-options' to="/vote"><MdHowToVote size={"20px"} color="#9ed0ed"/> Vote</NavLink>
             
             <div>
                         <a ref={refActive} onClick={()=>toggleEarn("earn")} href="#submenu2" data-bs-toggle="collapse" className="nav-link px-0 align-middle menu-nav-dropdown">
@@ -110,7 +110,7 @@ const MenuMobile = ({closeMenu}) => {
             </div>
 
             {/* <NavLink onClick={closeMenu} className='menu-nav-options' to={`/earn-strategies`}><FaMoneyBillWaveAlt  size={"20px"}/> Earn Strategies</NavLink> */}
-            <NavLink onClick={closeMenu} className='menu-nav-options' to="/collection"><MdCollections size={"20px"}/> Collection</NavLink>
+            <NavLink onClick={closeMenu} className='menu-nav-options' to="/collection"><MdCollections size={"20px"} color="#9ed0ed"/> Collection</NavLink>
         </div>
 
         <div className='comunity'>
