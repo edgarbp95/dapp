@@ -1271,6 +1271,7 @@ a{
     }
     .menu-mobile{
         display: flex !important;
+        overflow: hidden;
     }
 
     .modal-header{
