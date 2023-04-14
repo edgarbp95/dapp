@@ -1,6 +1,6 @@
 import './App.scss';
 import { Route,Routes } from 'react-router-dom';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import Home from './Routes/Home';
 import Vote from './Routes/Vote';
 import Collection from './Routes/Collection';
@@ -9,11 +9,53 @@ import EarnStrategies from './Routes/EarnStrategies';
 import Menu from './Components/Menu';
 import Header from './Components/Header';
 import ConnectWallet from './Components/ConnectWallet';
-
+import { loadData, addDataContracts } from './reducers/contractSlice';
+import { useDispatch } from 'react-redux';
+import axios from 'axios';
+import Loading from './Components/Loading';
+import EarnStrategies2 from './Routes/EarnStrategies2';
 
 
 function App() {
   const [modal,setModal] = useState(false)
+  const dispatch = useDispatch()
+  const [isLoading, setIsLoading] = useState(true);
+
+  async function loadData() {
+    try {
+      const response = await axios.get('http://localhost:5000/contracts');
+      const data = response.data;
+      dispatch(addDataContracts(data))
+     
+    } catch (error) {
+      console.error(error);
+    }
+  }
+  
+  useEffect(()=>{
+
+    // axios.get('http://localhost:5000/contracts')
+    // .then(response => {
+    //   dispatch(addDataContracts(response.data))
+    // })
+    // .catch(error => {
+    //   console.error(error);
+    // });
+
+    loadData()
+
+    const handleLoad = () => {
+      setIsLoading(false);
+    };
+
+    window.addEventListener("load", handleLoad);
+
+    return () => {
+      window.removeEventListener("load", handleLoad);
+    };
+
+  },[])
+
   function disableScroll() {
     document.body.classList.add("stop-scrolling");
   }
@@ -31,22 +73,28 @@ function App() {
     }
 
   return (
-    <div className='container-all'>
-      <Menu />
-      <ConnectWallet toggleModal={toggleModal} modal={modal}/>
-      <div className='container-right'>
-        <Header toggleModal={toggleModal} />
-        <div className='container-routes'>
-          <Routes>
-            <Route path="/" element={<Home/>} />
-            <Route path="/vote" element={<Vote />} />
-            {/* <Route path="/earn-strategies/weekly4" element={<EarnStrategies />} /> */}
-            <Route path="/collection" element={<Collection />} />
-            <Route path="/earn-strategies/:name" element={<EarnDinamic />} />
-          </Routes>
+    <>
+      {isLoading ? <Loading/> 
+
+      : <div className='container-all'>
+          <Menu />
+          <ConnectWallet toggleModal={toggleModal} modal={modal}/>
+          <div className='container-right'>
+            <Header toggleModal={toggleModal} />
+            <div className='container-routes'>
+              <Routes>
+                <Route path="/" element={<Home/>} />
+                <Route path="/vote" element={<Vote />} />
+                {/* <Route path="/earn-strategies/weekly4" element={<EarnStrategies />} /> */}
+                <Route path="/collection" element={<Collection />} />
+                <Route path="/earn-strategies/:name" element={<EarnDinamic />} />
+                <Route path='/strategies' element={<EarnStrategies2 />} />
+              </Routes>
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
+      }      
+    </>
   );
 }
 

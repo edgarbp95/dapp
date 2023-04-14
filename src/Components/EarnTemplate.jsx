@@ -4,7 +4,7 @@ import Button2 from './Button2'
 import Table from './Table'
 import {ImQuestion} from "react-icons/im"
 import {BsQuestionLg, BsQuestionSquare} from "react-icons/bs"
-const EarnTemplate = ({strategy,risk,pool,min,max,token,progress}) => {
+const EarnTemplate = ({namePool,yieldField,strategy,risk,pool,min,max,token,progress}) => {
 
     const [deposit,setDeposit] = useState()
     const bar = useRef()
@@ -32,7 +32,6 @@ const EarnTemplate = ({strategy,risk,pool,min,max,token,progress}) => {
     const MILLISECONDS_OF_A_HOUR = MILLISECONDS_OF_A_MINUTE * 60;
     const MILLISECONDS_OF_A_DAY = MILLISECONDS_OF_A_HOUR * 24
    
-
     const counter = ()=>{
         const NOW = new Date()
         const DURATION = DATE_TARGET - NOW;
@@ -53,8 +52,8 @@ const EarnTemplate = ({strategy,risk,pool,min,max,token,progress}) => {
         <div className='section-top'>
             <div className='strategies'>
                 <div className='strategies-txt'>
-                    <p>BENFT WEEKLY EARN 5</p>
-                    <h3>Weekly yield: 27%</h3>
+                    <p>{namePool}</p>
+                    <h3>Weekly yield: {yieldField}</h3>
                 </div>
                 <div className='strategies-txt-details'>
                     <h4>Strategy type: <span>{strategy}</span></h4>
