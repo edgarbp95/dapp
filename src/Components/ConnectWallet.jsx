@@ -1,9 +1,9 @@
 import React, { useState } from 'react'
-import metamaskLogo from "../Images/icons/metamask.png.png"
-import walletConnect from "../Images/icons/wallet-connect.png"
-import trustWallet from "../Images/icons/trust-wallet.png"
+import metamaskLogo from "../assets/icons/metamask.png.png"
+import walletConnect from "../assets/icons/wallet-connect.png"
+import trustWallet from "../assets/icons/trust-wallet.png"
 import {AiOutlineClose} from "react-icons/ai";
-import walletImg from "../Images/icons/wallet.png";
+import walletImg from "../assets/icons/wallet.png";
 
 const ConnectWallet = ({toggleModal, modal}) => {
 

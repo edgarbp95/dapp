@@ -1,8 +1,8 @@
 import React, { useEffect, useRef } from 'react'
 import {AiOutlineArrowUp,AiOutlineArrowDown} from "react-icons/ai"
-import slider1 from "../Images/slider/what-benft.jpg"
-import slider2 from "../Images/slider/web-defi.jpg"
-import slider3 from "../Images/slider/ai-earn-engine.jpg"
+import slider1 from "../assets/slider/what-benft.jpg"
+import slider2 from "../assets/slider/web-defi.jpg"
+import slider3 from "../assets/slider/ai-earn-engine.jpg"
 
 const Slider = () => {
 

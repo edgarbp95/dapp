@@ -1,11 +1,10 @@
-import './App.scss';
+import './assets/App.scss';
 import { Route,Routes } from 'react-router-dom';
 import { useEffect, useState } from 'react';
-import Home from './Routes/Home';
-import Vote from './Routes/Vote';
-import Collection from './Routes/Collection';
-import EarnDinamic from './Routes/EarnDinamic';
-import EarnStrategies from './Routes/EarnStrategies';
+import Home from './pages/Home';
+import Vote from './pages/Vote';
+import Collection from './pages/Collection';
+import EarnDinamic from './pages/EarnDinamic';
 import Menu from './Components/Menu';
 import Header from './Components/Header';
 import ConnectWallet from './Components/ConnectWallet';
@@ -13,8 +12,6 @@ import { loadData, addDataContracts } from './reducers/contractSlice';
 import { useDispatch } from 'react-redux';
 import axios from 'axios';
 import Loading from './Components/Loading';
-import EarnStrategies2 from './Routes/EarnStrategies2';
-
 
 function App() {
   const [modal,setModal] = useState(false)
@@ -85,10 +82,8 @@ function App() {
               <Routes>
                 <Route path="/" element={<Home/>} />
                 <Route path="/vote" element={<Vote />} />
-                {/* <Route path="/earn-strategies/weekly4" element={<EarnStrategies />} /> */}
                 <Route path="/collection" element={<Collection />} />
                 <Route path="/earn-strategies/:name" element={<EarnDinamic />} />
-                <Route path='/strategies' element={<EarnStrategies2 />} />
               </Routes>
             </div>
           </div>

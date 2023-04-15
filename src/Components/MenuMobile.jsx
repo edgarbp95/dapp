@@ -1,5 +1,5 @@
 import React, { useRef } from 'react'
-import logo from "../Images/logo/logo-benft.png"
+import logo from "../assets/logo/logo-benft.png"
 import {AiOutlineClose} from "react-icons/ai";
 import MenuNav from './MenuNav';
 import Comunity from './Comunity';

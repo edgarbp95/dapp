@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { Link, NavLink } from 'react-router-dom'
-import logoMin from "../Images/logo/logo-min.png"
+import logoMin from "../assets/logo/logo-min.png"
 import { FaMoneyBillWaveAlt } from 'react-icons/fa';
 import { HiHome } from 'react-icons/hi';
 import { MdHowToVote, MdCollections } from 'react-icons/md';

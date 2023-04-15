@@ -7,6 +7,8 @@ import {BsQuestionLg, BsQuestionSquare} from "react-icons/bs"
 const EarnTemplate = ({namePool,yieldField,strategy,risk,pool,min,max,token,progress}) => {
 
     const [deposit,setDeposit] = useState()
+    const amountApproved = 500;
+
     const bar = useRef()
     const poolSize = parseFloat(pool)
     const progressParse = parseFloat(progress)
@@ -82,8 +84,9 @@ const EarnTemplate = ({namePool,yieldField,strategy,risk,pool,min,max,token,prog
                     <p className='bar-detail'>{progress}</p>
                     <p className='max' >{poolSize}</p>
                 </div>
-                <div>
+                <div className='approve'>
                     <Button2 txt="Approve"/>
+                    <p className='amount-approved'>Amount approved for use: <span>{amountApproved} USDT</span></p>
                 </div>
 
                 <div className='details-staked'>

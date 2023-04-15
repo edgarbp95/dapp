@@ -1,8 +1,8 @@
 import React, { useRef, useState } from 'react'
-import collection1 from "../Images/slider/web-defi.jpg"
-import collection2 from "../Images/slider/ai-earn-engine.jpg"
-import card1 from "../Images/collection/turkey.jpg"
-import card2 from "../Images/collection/genesis.jpg"
+import collection1 from "../assets/slider/web-defi.jpg"
+import collection2 from "../assets/slider/ai-earn-engine.jpg"
+import card1 from "../assets/collection/turkey.jpg"
+import card2 from "../assets/collection/genesis.jpg"
 import Button2 from '../Components/Button2'
 
 const Collection = () => {
