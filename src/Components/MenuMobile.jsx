@@ -17,7 +17,7 @@ const MenuMobile = ({closeMenu}) => {
   return (
     <div className='menu-mobile'>
         <div className='logo'>
-            <img className='logo-menu' src={logo} alt="" />
+            <img className='logo-menu' src={logo} alt="logo-benft" />
             <AiOutlineClose onClick={closeMenu} color='#2c98d4' size={"30px"}/>
         </div>
         

@@ -51,7 +51,7 @@ const Header = ({toggleModal}) => {
             </div>
         </div>
 
-        <Button funct={toggleModal}/>
+        <Button funct={toggleModal} />
 
         <div className={`mobile-menu ${animation}`} ref={menuRef} >
             <MenuMobile closeMenu={setMenu} />

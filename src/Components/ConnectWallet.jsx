@@ -13,7 +13,7 @@ const ConnectWallet = ({toggleModal, modal}) => {
 
         <div className='container-modal'>
             <div className='modal-info'>
-                <img className='wallet-img' src={walletImg} alt="" />
+                <img className='wallet-img' src={walletImg} alt="imagen de billetera electronica" />
                 <div className='modal-info-txt'>
                     <h2>Connect Wallet</h2>
                     <p>Start by connecting with one of the wallets below. Be sure to store your private keys or seed phrase securely. Never share them with anyone.</p>

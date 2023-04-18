@@ -16,7 +16,7 @@ const Menu = () => {
   return (
     <div className='menu'>
         <div className='logo'>
-            <img className='logo-menu' src={logo} alt="" />
+            <img className='logo-menu' src={logo} alt="logo-benft" />
         </div>
         <MenuNav removeAct={removeActive} addAct={addActive} refActive={refActive}/>
 

@@ -3,7 +3,8 @@ import React from 'react'
 const Button = ({funct}) => {
   return (
     <>
-        <button className='button' onClick={funct}>
+        <button className='button' onClick={funct} data-aos="fade-in"
+        data-aos-duration="800" >
         Connect Wallet
         <div id="clip">
             <div id="leftTop" className="corner" />

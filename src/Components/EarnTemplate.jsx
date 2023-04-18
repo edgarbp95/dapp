@@ -28,7 +28,7 @@ const EarnTemplate = ({namePool,yieldField,strategy,risk,pool,min,max,token,prog
     const [minutes,setMinutes] = useState()
     const [hours,setHours] = useState()
     const [days,setDays] = useState()
-    const DATE_TARGET = new Date('4/10/2023 0:01 AM');
+    const DATE_TARGET = new Date('4/20/2023 0:01 AM');
     const MILLISECONDS_OF_A_SECOND = 1000;
     const MILLISECONDS_OF_A_MINUTE = MILLISECONDS_OF_A_SECOND * 60;
     const MILLISECONDS_OF_A_HOUR = MILLISECONDS_OF_A_MINUTE * 60;
@@ -52,7 +52,10 @@ const EarnTemplate = ({namePool,yieldField,strategy,risk,pool,min,max,token,prog
   return (
     <div className='earn-strategies'>
         <div className='section-top'>
-            <div className='strategies'>
+            <div className='strategies'
+            data-aos="fade-right"
+            data-aos-delay="100"
+            data-aos-duration="1000">
                 <div className='strategies-txt'>
                     <p>{namePool}</p>
                     <h3>Weekly yield: {yieldField}</h3>
@@ -74,7 +77,10 @@ const EarnTemplate = ({namePool,yieldField,strategy,risk,pool,min,max,token,prog
                     <h4>Token: <span>{token}</span></h4>
                 </div>
             </div>
-            <div className='progress-section'>
+            <div className='progress-section'
+             data-aos="fade-left"
+             data-aos-delay="100"
+             data-aos-duration="1000">
                 <h3><FaUserAlt size={"20px"}/> Progress in Pool</h3>
                 <div className='progress-bar'>
                     <div ref={bar} className='bar'>

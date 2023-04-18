@@ -11,45 +11,74 @@ const EarnDinamic = () => {
 
     const dataContract = data
 
-    const [dataPool, setDataPool] = useState("")
+    // const [dataPool, setDataPool] = useState("")
   
-    // const poolBackend= [
-    //     {
-    //         name:"weekly4",
-    //         strategy:"Trading and arbitrage",
-    //         risk: "Low",
-    //         poolSize: "200000",
-    //         minEntry: "25",
-    //         maxEntry: "200000",
-    //         progress: "145000",
-    //         token: "USDT"
-    //     }]
+    const poolBackend= [
+        {
+            namePool: "BeNFT Weekly Earn 4",
+            yieldField: "18%",
+            name:"weekly4",
+            strategy:"Trading and arbitrage",
+            risk: "Low",
+            poolSize: "200000",
+            minEntry: "25",
+            maxEntry: "200000",
+            progress: "145000",
+            token: "USDT"
+        },
+        {
+          namePool: "BeNFT Weekly Earn 5",
+          yieldField: "27%",
+          name:"weekly5",
+          strategy:"Trading and arbitrage",
+          risk: "Low",
+          poolSize: "250000",
+          minEntry: "25",
+          maxEntry: "200000",
+          progress: "145000",
+          token: "USDT"
+      },
+      {
+          namePool: "BeNFT Montly 1",
+          yieldField: "50%",
+          name:"monthly1",
+          strategy:"Trading and arbitrage",
+          risk: "Low",
+          poolSize: "200000",
+          minEntry: "25",
+          maxEntry: "200000",
+          progress: "145000",
+          token: "USDT"
+      }
+      ]
 
     const {name} = useParams()
     
-    useEffect(()=>{
-      if(dataContract !== ""){
-        const pool =  dataContract.filter(pool=> pool.name == name)
-        setDataPool(pool)
-        return
-      }
-    },[dataContract])
+    // useEffect(()=>{
+    //   if(dataContract !== ""){
+    //     const pool =  dataContract.filter(pool=> pool.name == name)
+    //     setDataPool(pool)
+    //     return
+    //   }
+    // },[dataContract])
 
-    useEffect(()=>{
-      if(dataContract !== ""){
-        const pool =  dataContract.filter(pool=> pool.name == name)
-        setDataPool(pool)
-        return
-      }
-    },[name])
+    // useEffect(()=>{
+    //   if(dataContract !== ""){
+    //     const pool =  dataContract.filter(pool=> pool.name == name)
+    //     setDataPool(pool)
+    //     return
+    //   }
+    // },[name])
+
+    const pool =  poolBackend.filter(pool=> pool.name == name)
 
   return (
     <>
-      {dataContract == "" ? <Loading/> : 
+      {/* {dataContract == "" ? <Loading/> :  */}
       <div>
-        {dataPool == "" ? <NotFound/> : <EarnTemplate namePool={dataPool[0].namePool} yieldField={dataPool[0].yieldField} strategy={dataPool[0].strategy} risk={dataPool[0].risk} pool={dataPool[0].poolSize} min={dataPool[0].minEntry} max={dataPool[0].maxEntry} progress={dataPool[0].progress} token={dataPool[0].token}/>}
+        {pool == "" ? <NotFound/> : <EarnTemplate namePool={pool[0].namePool} yieldField={pool[0].yieldField} strategy={pool[0].strategy} risk={pool[0].risk} pool={pool[0].poolSize} min={pool[0].minEntry} max={pool[0].maxEntry} progress={pool[0].progress} token={pool[0].token}/>}
       </div>
-      }
+      {/* } */}
     </>
   )
 }

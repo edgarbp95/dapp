@@ -7,11 +7,17 @@ const Vote = () => {
   return (
     <div >
         <div className='container-route votes'>
-            <div className='votes-left'>
+            <div className='votes-left'
+            data-aos="fade-right"
+            data-aos-delay="100"
+            data-aos-duration="1000">
                 <h3>Votes</h3>
                 <p>{votes}</p>
             </div>
-            <div className='votes-right'>
+            <div className='votes-right'
+            data-aos="fade-left"
+            data-aos-delay="100"
+            data-aos-duration="1000">
                 <div className='votes-right-1'>
                     <h3>VOTING TO OPEN A NEW POOL : <span>WEEKLY #{weekly}</span></h3>
                     <p>$BeAI always listen the community asks therefore, we decided to open up a voting session to determine if Weekly #5 goes live.</p>

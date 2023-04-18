@@ -5,6 +5,7 @@ import { AiFillInstagram } from 'react-icons/ai';
 const Comunity = () => {
   return (
     <div className='comunity'>
+           
             <ul className='comunity-grid'>
                 <li><a href="https://www.youtube.com/watch?v=14TT8G_vL0U&ab_channel=BeNFTSolutionsOfficial" target="_blank"><FaYoutube size={"20px"}/></a></li>
                 <li><a href="https://www.instagram.com/benft.solutions/" target="_blank"> <AiFillInstagram  size={"20px"}/></a></li>

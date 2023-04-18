@@ -36,7 +36,7 @@ const Slider = () => {
     }
 
   return (
-    <div ref={sliderContainer} className="slider-container">
+    <div ref={sliderContainer} className="slider-container" data-aos="fade-right" data-aos-duration="1000" >
         <div ref={slideLeft} className="left-slide">
             <div >
             <h1>What is BeNFT</h1>
@@ -66,10 +66,10 @@ const Slider = () => {
 
         </div>
         <div className=" action-buttons">
-            <button onClick={()=> slider("up")}  className=" button-slider down-button">
+            <button onClick={()=> slider("up")}  className=" button-slider down-button ">
                 <AiOutlineArrowDown size={"18px"} color='#2c98d4'/>
             </button>
-            <button onClick={()=> slider("down")} className=" button-slider up-button">
+            <button onClick={()=> slider("down")} className=" button-slider up-button ">
                 <AiOutlineArrowUp size={"18px"} color='#2c98d4'/>
             </button>
         </div>

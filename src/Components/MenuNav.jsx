@@ -40,11 +40,11 @@ const MenuNav = ({removeAct, addAct, refActive}) => {
 
   return (
     <div className='menu-nav'>
-            <NavLink onClick={removeAct} className='menu-nav-options' to="/"><HiHome size={"20px"} color="#9ed0ed"/> Dashboard</NavLink>
-            <NavLink onClick={removeAct} className='menu-nav-options' to="/vote"><MdHowToVote size={"20px"} color="#9ed0ed"/> Vote</NavLink>
+            <NavLink onClick={removeAct} className='menu-nav-options' to="/" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="100"><HiHome size={"20px"} color="#9ed0ed"/> Dashboard</NavLink>
+            <NavLink onClick={removeAct} className='menu-nav-options' to="/vote" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="200"><MdHowToVote size={"20px"} color="#9ed0ed"/> Vote</NavLink>
             
             <div>
-                        <a ref={refActive} onClick={()=>toggleEarn("earn")} href="#submenu2" data-bs-toggle="collapse" className="nav-link px-0 align-middle menu-nav-dropdown">
+                        <a ref={refActive} onClick={()=>toggleEarn("earn")} href="#submenu2" data-bs-toggle="collapse" className="nav-link px-0 align-middle menu-nav-dropdown" data-aos="fade-right" data-aos-delay="300">
                             <span className="ms-1 d-sm-inline"><FaMoneyBillWaveAlt className='me-1' size={"20px"} color="#9ed0ed"/> Earn Strategies <IoIosArrowDown className={`${!isOpen.earn ? "arrow-close" : "arrow-open"}`}/>
                             {/* <AiOutlineArrowDown className={`${isOpen.earn ? "arrow-close" : "arrow-open"}`}/> */}
                             </span></a>
@@ -95,7 +95,7 @@ const MenuNav = ({removeAct, addAct, refActive}) => {
             </div>
             
             {/* <NavLink className='menu-nav-options' to={`/earn-strategies`}><FaMoneyBillWaveAlt  size={"20px"}/> Earn Strategies</NavLink> */}
-            <NavLink onClick={removeAct} className='menu-nav-options' to="/collection"><MdCollections size={"20px"} color="#9ed0ed"/> Collection</NavLink>
+            <NavLink onClick={removeAct} className='menu-nav-options' to="/collection" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="400"><MdCollections size={"20px"} color="#9ed0ed"/> Collection</NavLink>
         </div>
   )
 }

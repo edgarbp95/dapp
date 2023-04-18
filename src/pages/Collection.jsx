@@ -39,21 +39,36 @@ const Collection = () => {
         
     }
 
+    const selectImg = ()=>{
+        if(select==0){
+            return <img src={collection1} alt="" />
+        } else if(select == 1){
+            return <img src={collection2} alt="" />
+        }
+    }
+
   return (
     <div>
       <div className='container-route collection'>
-        <div className='bg-collection'>
-            {
+        <div className='bg-collection'
+        data-aos="fade-down"
+        data-aos-delay="100"
+        data-aos-duration="800">
+            {/* {
                 select == 0 ? <img src={collection1} alt="" /> : <img src={collection2} alt="" />
+            } */}
+            {
+                selectImg()
             }
-            
 
         </div>
-        <div ref={ref0} className='container-collection'>
+        <div ref={ref0} className='container-collection'
+        data-aos="fade-up"
+        data-aos-duration="800">
 
             {
             itemsCollection.map((item,i)=> (
-                <div key={i} onClick={()=>selectCard(i)} className={`item-collection ${i == 0 ? "collection-active" : ""} `}>
+                <div key={i} onClick={()=>selectCard(i)} className={`item-collection ${i == 0 ? "collection-active" : ""} `} >
                     <img className='prueba' src={item.image} alt="" />
                     <div className='item-collection-txt'>
                         <h3>{item.tittle}</h3>

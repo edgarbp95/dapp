@@ -1,4 +1,6 @@
 import './assets/App.scss';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 import { Route,Routes } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import Home from './pages/Home';
@@ -17,6 +19,10 @@ function App() {
   const [modal,setModal] = useState(false)
   const dispatch = useDispatch()
   const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(()=>{
+    AOS.init()
+  },[])
 
   async function loadData() {
     try {
@@ -71,9 +77,7 @@ function App() {
 
   return (
     <>
-      {isLoading ? <Loading/> 
-
-      : <div className='container-all'>
+      <div className='container-all'>
           <Menu />
           <ConnectWallet toggleModal={toggleModal} modal={modal}/>
           <div className='container-right'>
@@ -87,8 +91,7 @@ function App() {
               </Routes>
             </div>
           </div>
-        </div>
-      }      
+        </div>      
     </>
   );
 }
