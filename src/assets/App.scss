@@ -1359,6 +1359,10 @@ a{
     .btn3{
       min-height: 150px !important;
     }
+    
+    .container-cards{
+      height: 82vh !important;
+    }
 
     .container-right{
         height: 100% !important;
@@ -1472,24 +1476,6 @@ a{
         display: none;
       }
 
-      // ul{
-      //     // background-color: rgba(255, 255, 255, 0.37) !important;
-      //     width: 300px !important;
-      //     height: 500px !important;
-      //     border-radius: 15px;
-      //     position: relative;
-      //     padding-left: 0 !important;
-
-      //     .close{
-      //         position: absolute !important;
-      //         top: 30px !important;
-      //         right: 30px !important;
-      //     }
-
-      //     li{
-      //         color: var(--dark) !important;
-      //     }
-      // }
   }
 
     .header{
