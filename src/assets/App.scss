@@ -20,11 +20,6 @@ h1,h2,h3,h4,h5,li,a,p,span{
   font-family: 'Chakra Petch', sans-serif;
 }
 
-// p,span{
-//   font-family: 'IBM Plex Mono',sans-serif;
-
-// }
-
 :root{
   --blue-deg: #3e464cad;
   --blue-l: #2c98d4;
@@ -52,16 +47,6 @@ html {
       height: 100%;
       z-index: -5;
       background: #245b780c;
-      // background-image: linear-gradient(
-      //   to top left,
-      //   #245b7821 20%,
-      //   #2c99d4 40%,
-      //   #9ed0ed2d 60%,
-      //   #232a2d9d 80%
-      // );
-      // background-size: 200% 200%;
-      // animation: moveBg 5s linear infinite alternate;
-      // opacity: 0.5;
     }
 }
 
@@ -78,26 +63,10 @@ html {
 body{
     font-family: ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
     font-feature-settings: normal;
-    // background-image: url("./bg-body.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-color: #121312;
-    // background-image: url("https://steamcdn-a.akamaihd.net/steamcommunity/public/images/items/286300/c33a58cd147d270171996c766b102de411603d89.jpg");
-    background-image: url("https://img.freepik.com/free-vector/gradient-tech-futuristic-background_52683-74267.jpg");
-
-    // &::before{
-    //   content: "";
-    //   position: absolute;
-    //   top: 0;
-    //   left: 0;
-    //   right: 0;
-    //   bottom: 0;
-    //   height: 100%;
-    //   background-attachment: initial;
-    //   background-image: url(./pattern.png);
-    //   background-repeat: repeat;
-    //   background-size: 4.6875rem;
-    // }
+    background-image: url("./bg-body.png");
 
     &::before{
         content: '';
@@ -125,10 +94,8 @@ body{
       -webkit-filter: blur(150px);
       -o-filter: blur(150px);
       filter: blur(150px);
-      // z-index: 1;
     }
     
-
 }
 
 a{
@@ -272,9 +239,6 @@ a{
         
         padding: 40px 35px;
         gap: 50px;
-
-        
-
 
         .logo-menu{
             height: 83px;
