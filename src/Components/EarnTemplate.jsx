@@ -77,7 +77,7 @@ const EarnTemplate = ({namePool,yieldField,strategy,risk,pool,min,max,token,prog
                     <h4>Max entry: <span>{max} USDT</span></h4>
                     <h4>Token: <span>{token}</span></h4>
                     <h4 className='pool-address'>Address: <span><a href="">{address}</a></span></h4>
-                    <h4>Money: <span>{money}</span></h4>
+                    <h4>SC Balance: <span>{money}</span></h4>
                 </div>
             </div>
             <div className='progress-section'

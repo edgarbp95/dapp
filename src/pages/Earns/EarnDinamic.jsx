@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
-import EarnTemplate from '../Components/EarnTemplate'
-import NotFound from '../Components/NotFound'
+import EarnTemplate from '../../Components/EarnTemplate'
+import NotFound from '../../Components/NotFound'
 import { useSelector } from 'react-redux'
-import Loading from '../Components/Loading'
+import Loading from '../../Components/Loading'
 
 const EarnDinamic = () => {
 

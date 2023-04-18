@@ -1,5 +1,5 @@
 import React from 'react'
-import Slider from '../Components/Slider'
+import Slider from '../../Components/Slider'
 import {FiUsers} from "react-icons/fi"
 import {BsGraphUp} from "react-icons/bs"
 import {MdOutlineHandshake} from "react-icons/md"
