@@ -1349,6 +1349,12 @@ a{
 
   @media only screen and (max-width:800px){
 
+    .container-right{
+      &::before{
+        left: 25% !important;
+      }
+    }
+
     .progress-section-details{
       flex-direction: column;
       gap: 10px !important;
@@ -1702,6 +1708,12 @@ a{
 
 
   @media only screen and (min-width:801px) and (max-width:1025px){
+
+    .container-right{
+      &::before{
+        left: 55% !important;
+      }
+    }
 
     .progress-section-details{
       flex-direction: column;
