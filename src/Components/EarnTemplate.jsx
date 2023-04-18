@@ -137,7 +137,7 @@ const EarnTemplate = ({namePool,yieldField,strategy,risk,pool,min,max,token,prog
                                 <p className='table-number'>{totalPayout} USDT</p>
                             </div>
                         </div>
-                        <button className='btn2'>
+                        <button className='btn2 btn-claim'>
                             <p className='text-button-remaining'>
                                 <span id="days">{days}</span> days / <span id="hours">{hours}</span> hours / <span id="minutes">{minutes}</span> minutes / <span id="seconds">{seconds}</span> seconds to Claim
                             </p>

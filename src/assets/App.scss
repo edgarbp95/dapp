@@ -2080,7 +2080,7 @@ a{
   // text-align: center;
   padding-left: 15px;
   padding-bottom: 25px;
-  width: 250px;
+  width: 100%;
   font-weight: 600;
   border-radius: 5px;
 
@@ -2423,14 +2423,14 @@ a{
   }
 
   button{
-    width: fit-content;
+    width: 100%;
   }
 }
 
 .amount-approved{
   padding: 15px;
   border: 2px solid var(--blue-t);
-  width: fit-content;
+  width: 100%;
   color: rgba(245, 245, 245, 0.685);
   font-size: 15px;
   box-shadow: 0 0 6px var(--blue-t);
@@ -2844,6 +2844,8 @@ a{
   
 }
 
+
+
 .max-input{
   height: 20px;
   border: none;
@@ -2860,4 +2862,13 @@ a{
     background-color: var(--blue-w);
     color: var(--dark);
   }
+}
+
+.input-button{
+  display: flex;
+  flex-direction: column;
+}
+
+.btn-claim{
+  width: 100%;
 }
