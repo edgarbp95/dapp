@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from 'react'
 import {FaUserAlt} from "react-icons/fa"
 import Button2 from './Button2'
 import Table from './Table'
+import usdt from "../assets/icons/usdt.png"
 import {ImQuestion} from "react-icons/im"
 import {BsQuestionLg, BsQuestionSquare} from "react-icons/bs"
 const EarnTemplate = ({namePool,yieldField,strategy,risk,pool,min,max,token,progress}) => {
@@ -107,7 +108,7 @@ const EarnTemplate = ({namePool,yieldField,strategy,risk,pool,min,max,token,prog
                                     <div className='div-input-deposit'>
                                         <input className='input-deposit' placeholder='0.0' type="number" onChange={(e)=>{setDeposit(e.target.value)}} />
                                         <div className='input-usdt'>
-                                            <img className='input-icon' src="https://cryptologos.cc/logos/tether-usdt-logo.png" alt="" />
+                                            <img className='input-icon' src={usdt} alt="Logo de USDT" />
                                             <p>USDT</p>
                                         </div>
                                         <div className='balance-input'>
