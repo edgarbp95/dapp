@@ -8,7 +8,8 @@ const EarnTemplate = ({namePool,yieldField,strategy,risk,pool,min,max,token,prog
 
     const [deposit,setDeposit] = useState()
     const amountApproved = 500;
-
+    const address= "0x8F7Ebc23212F6aDCC7A5f1c86197EC337c2F4997";
+    const money= "500,000.00 USDT";
     const bar = useRef()
     const poolSize = parseFloat(pool)
     const progressParse = parseFloat(progress)
@@ -75,6 +76,8 @@ const EarnTemplate = ({namePool,yieldField,strategy,risk,pool,min,max,token,prog
                     <h4>Min entry: <span>{min} USDT</span></h4>
                     <h4>Max entry: <span>{max} USDT</span></h4>
                     <h4>Token: <span>{token}</span></h4>
+                    <h4 className='pool-address'>Address: <span><a href="">{address}</a></span></h4>
+                    <h4>Money: <span>{money}</span></h4>
                 </div>
             </div>
             <div className='progress-section'
@@ -82,50 +85,56 @@ const EarnTemplate = ({namePool,yieldField,strategy,risk,pool,min,max,token,prog
              data-aos-delay="100"
              data-aos-duration="1000">
                 <h3><FaUserAlt size={"20px"}/> Progress in Pool</h3>
-                <div className='progress-bar'>
-                    <div ref={bar} className='bar'>
-                        
+                <div className='progress-section-details'>
+                    <div className='progress-section-details-bar'>
+                        <div className='progress-bar'>
+                            <div ref={bar} className='bar'>
+                                
+                            </div>
+                            <p className='min' >0</p>
+                            <p className='bar-detail'>{progress}</p>
+                            <p className='max' >{poolSize}</p>
+                        </div>
+                        <div className='approve'>
+                            <Button2 txt="Approve"/>
+                            <p className='amount-approved'>Amount approved for use: <span>{amountApproved} USDT</span></p>
+                        </div>
+
+                        <div className='details-staked'>
+
+                            <div className='details-staked-input'>
+                                <div>
+                                    <input className='input-deposit' type="number" onChange={(e)=>{setDeposit(e.target.value)}} />
+                                    <button className='btn2'>Deposit</button>
+                                </div>
+                                <p>Your balance: <span>{balance} $USDT</span></p>
+                            </div>
+                        </div>
                     </div>
-                    <p className='min' >0</p>
-                    <p className='bar-detail'>{progress}</p>
-                    <p className='max' >{poolSize}</p>
-                </div>
-                <div className='approve'>
-                    <Button2 txt="Approve"/>
-                    <p className='amount-approved'>Amount approved for use: <span>{amountApproved} USDT</span></p>
+                    <div className='progress-section-details-staked'>
+                        <div className='table-staked'>
+                            <div className='table-row row1'>
+                                <div><h3>Your stake:</h3></div>
+                                <p className='table-number'>{stake} USDT</p>
+                            </div>
+                            <div className='table-row row1'>
+                                <div><h3>Pending Earn:</h3></div>
+                                <p className='table-number'>{pendingEarn} USDT</p>
+                            </div>
+                            <div className='table-row '>
+                                <div><h3>Total payout:</h3></div>
+                                <p className='table-number'>{totalPayout} USDT</p>
+                            </div>
+                        </div>
+                        <button className='btn2'>
+                            <p className='text-button-remaining'>
+                                <span id="days">{days}</span> days / <span id="hours">{hours}</span> hours / <span id="minutes">{minutes}</span> minutes / <span id="seconds">{seconds}</span> seconds to Claim
+                            </p>
+                        </button>
+                    </div>
                 </div>
 
-                <div className='details-staked'>
-
-                <div className='details-staked-input'>
-                    <div>
-                        <input className='input-deposit' type="number" onChange={(e)=>{setDeposit(e.target.value)}} />
-                        <button className='btn2'>Deposit</button>
-                    </div>
-                    <p>Your balance: <span>{balance} $USDT</span></p>
-                </div>
-
-                <div className='table-staked'>
-                    <div className='table-row row1'>
-                        <div><h3>Your stake:</h3></div>
-                        <p className='table-number'>{stake} USDT</p>
-                    </div>
-                    <div className='table-row row1'>
-                        <div><h3>Pending Earn:</h3></div>
-                        <p className='table-number'>{pendingEarn} USDT</p>
-                    </div>
-                    <div className='table-row '>
-                        <div><h3>Total payout:</h3></div>
-                        <p className='table-number'>{totalPayout} USDT</p>
-                    </div>
-                </div>
-                <button className='btn2'>
-                    <p className='text-button-remaining'>
-                        <span id="days">{days}</span> days / <span id="hours">{hours}</span> hours / <span id="minutes">{minutes}</span> minutes / <span id="seconds">{seconds}</span> seconds to Claim
-                    </p>
-                </button>
-
-                </div>
+                
 
             </div>
 

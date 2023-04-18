@@ -235,9 +235,7 @@ const Table = () => {
     ]
   return (
     <div className='container-table'
-    data-aos="fade-up"
-    data-aos-delay="100"
-    data-aos-duration="1000">
+    >
             <table>
                 <thead>
                 <tr>
