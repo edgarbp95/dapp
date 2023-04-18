@@ -2,12 +2,14 @@ import React, { useRef, useState } from 'react'
 import Button from './Button'
 import logoMin from "../assets/logo/logo-min.png"
 import MenuMobile from './MenuMobile'
-
+import {IoIosArrowDown} from "react-icons/io";
+import {FiLogOut} from "react-icons/fi"
 
 
 const Header = ({toggleModal}) => {
 
-    
+    const wallet = "0x25d...C635";
+    const balance = "0.05"
 
     function disableScroll() {
         document.body.classList.add("stop-scrolling");
@@ -19,9 +21,7 @@ const Header = ({toggleModal}) => {
 
       console.log()
 
-
-
-
+    const [walletModal,setWalletModal] = useState(false)
     const [isOpen, setIsOpen] = useState(false);
     const [animation, setAnimation] = useState("")
     const menuRef = useRef("")
@@ -51,7 +51,18 @@ const Header = ({toggleModal}) => {
             </div>
         </div>
 
-        <Button funct={toggleModal} />
+        <div className='wallet-connected'>
+          <div onClick={()=>setWalletModal(!walletModal)} className='wallet'>
+            <p>{wallet}</p>
+            <IoIosArrowDown />
+          </div>
+          <div className={`wallet-connected-data ${walletModal ? "visible" : "hidden"}`}>
+            <p>BNB: <span>{balance}</span></p>
+            <p>Disconnect <span><FiLogOut/></span></p>
+          </div>
+        </div>
+        
+        {/* <Button funct={toggleModal} /> */}
 
         <div className={`mobile-menu ${animation}`} ref={menuRef} >
             <MenuMobile closeMenu={setMenu} />

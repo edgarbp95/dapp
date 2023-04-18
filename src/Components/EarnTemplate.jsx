@@ -103,11 +103,21 @@ const EarnTemplate = ({namePool,yieldField,strategy,risk,pool,min,max,token,prog
                         <div className='details-staked'>
 
                             <div className='details-staked-input'>
-                                <div>
-                                    <input className='input-deposit' type="number" onChange={(e)=>{setDeposit(e.target.value)}} />
+                                <div className='input-button'>
+                                    <div className='div-input-deposit'>
+                                        <input className='input-deposit' placeholder='0.0' type="number" onChange={(e)=>{setDeposit(e.target.value)}} />
+                                        <div className='input-usdt'>
+                                            <img className='input-icon' src="https://cryptologos.cc/logos/tether-usdt-logo.png" alt="" />
+                                            <p>USDT</p>
+                                        </div>
+                                        <div className='balance-input'>
+                                            <p>Balance: <span>{balance}</span></p>
+                                            <button className='max-input'>MAX</button>
+                                        </div>
+                                    </div>
                                     <button className='btn2'>Deposit</button>
                                 </div>
-                                <p>Your balance: <span>{balance} $USDT</span></p>
+                                
                             </div>
                         </div>
                     </div>
