@@ -1,15 +1,14 @@
-import React, { useRef, useState } from 'react'
+import React, { useContext, useRef, useState } from 'react'
 import Button from './Button'
 import logoMin from "../assets/logo/logo-min.png"
 import MenuMobile from './MenuMobile'
 import {IoIosArrowDown} from "react-icons/io";
 import {FiLogOut} from "react-icons/fi"
+import { WalletContext } from '../Providers/WallectConnect';
 
 
 const Header = ({toggleModal}) => {
-
-    const wallet = "0x25d...C635";
-    const balance = "0.05"
+  const { address, disconnectWallet, balance } = useContext(WalletContext);
 
     function disableScroll() {
         document.body.classList.add("stop-scrolling");
@@ -18,8 +17,6 @@ const Header = ({toggleModal}) => {
       function enableScroll() {
         document.body.classList.remove("stop-scrolling");
       }
-
-      console.log()
 
     const [walletModal,setWalletModal] = useState(false)
     const [isOpen, setIsOpen] = useState(false);
@@ -51,18 +48,18 @@ const Header = ({toggleModal}) => {
             </div>
         </div>
 
-        <div className='wallet-connected'>
+       {address && <div className='wallet-connected'>
           <div onClick={()=>setWalletModal(!walletModal)} className='wallet'>
-            <p>{wallet}</p>
+            <p>{address.substr(0,8)}...{address.substr(-8,8)}</p>
             <IoIosArrowDown />
           </div>
           <div className={`wallet-connected-data ${walletModal ? "visible" : "hidden"}`}>
             <p>BNB: <span>{balance}</span></p>
-            <p>Disconnect <span><FiLogOut/></span></p>
+            <p onClick={()=>disconnectWallet()} >Disconnect <span><FiLogOut/></span></p>
           </div>
-        </div>
+        </div>}
         
-        {/* <Button funct={toggleModal} /> */}
+        {!address &&<Button funct={toggleModal} />}
 
         <div className={`mobile-menu ${animation}`} ref={menuRef} >
             <MenuMobile closeMenu={setMenu} />

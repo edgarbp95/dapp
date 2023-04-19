@@ -57,7 +57,7 @@ const MenuNav = ({removeAct, addAct, refActive}) => {
                                 <a onClick={()=>toggleEarn("claim")} href="#submenu3" data-bs-toggle="collapse" className="px-0"> Claim Only <IoIosArrowDown className={`${!isOpen.claim ? "arrow-close" : "arrow-open"}`}/></a>
                                 <ul className="collapse nav flex-column ms-3 pb-2" id="submenu3" data-bs-parent="#menu">
                                     <li className='w-100'>
-                                        <NavLink onClick={addAct} to="/earn-strategies/weekly4"> Weekly 4</NavLink>
+                                        <NavLink onClick={addAct} to="/earn-strategies/0x3617aDBd5Fa162dfb44F15C5e28599DaE0CFde3d"> Weekly 4</NavLink>
                                     </li>
                                     <li className='w-100'>
                                         <NavLink onClick={addAct} to="/earn-strategies/weekly5"> Weekly 5</NavLink>
@@ -77,7 +77,7 @@ const MenuNav = ({removeAct, addAct, refActive}) => {
                                 <a onClick={()=>toggleEarn("weekly")} href="#submenu4" data-bs-toggle="collapse" className="px-0"> Weekly <IoIosArrowDown className={`${!isOpen.weekly ? "arrow-close" : "arrow-open"}`}/></a>
                                 <ul className="collapse nav flex-column ms-3 " id="submenu4" data-bs-parent="#menu">
                                     <li className='w-100'>
-                                        <NavLink onClick={addAct} to="/earn-strategies/weekly4"> Public Pool</NavLink>
+                                        <NavLink onClick={addAct} to="/earn-strategies/0x4C4121CBBFf68C46D49E203c164479B48423064d"> Public Pool</NavLink>
                                     </li>
                                 </ul>
                             </li>

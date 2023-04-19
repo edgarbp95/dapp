@@ -1,8 +1,8 @@
  [
         {
-            "namePool": "BeNFT Weekly Earn 4",
+            "address":"0x3617aDBd5Fa162dfb44F15C5e28599DaE0CFde3d",
+            "namePool": "SCM",
             "yieldField": "27%",
-            "name":"weekly4",
             "strategy":"Trading and arbitrage",
             "risk": "Low",
             "poolSize": "200000",
@@ -12,57 +12,9 @@
             "token": "USDT"
         },
         {
-            "namePool": "BeNFT Weekly Earn 5",
-            "yieldField": "27%",
-            "name":"weekly5",
-            "strategy":"Trading and arbitrage",
-            "risk": "Low",
-            "poolSize": "250000",
-            "minEntry": "25",
-            "maxEntry": "200000",
-            "progress": "145000",
-            "token": "USDT"
-        },
-        {
-            "namePool": "BeNFT Montly 1",
-            "yieldField": "50%",
-            "name":"monthly1",
-            "strategy":"Trading and arbitrage",
-            "risk": "Low",
-            "poolSize": "200000",
-            "minEntry": "25",
-            "maxEntry": "200000",
-            "progress": "145000",
-            "token": "USDT"
-        },
-        {
-            "namePool": "EARN BENFT PASS",
-            "yieldField": "23.3% x 1.5 = 35%",
-            "name":"EarnBeNFTPass",
-            "strategy":"Trading and arbitrage",
-            "risk": "Low",
-            "poolSize": "200000",
-            "minEntry": "25",
-            "maxEntry": "200000",
-            "progress": "145000",
-            "token": "USDT"
-        },
-        {
-            "namePool": "GH Private",
-            "yieldField": "27%",
-            "name":"Private1",
-            "strategy":"Trading and arbitrage",
-            "risk": "Low",
-            "poolSize": "200000",
-            "minEntry": "25",
-            "maxEntry": "200000",
-            "progress": "145000",
-            "token": "USDT"
-        },
-        {
-            "namePool": "LV Private",
-            "yieldField": "27%",
-            "name":"Private2",
+            "address":"0x4C4121CBBFf68C46D49E203c164479B48423064d",
+            "namePool": "PUBLIC",
+            "yieldField": "18%",
             "strategy":"Trading and arbitrage",
             "risk": "Low",
             "poolSize": "200000",
