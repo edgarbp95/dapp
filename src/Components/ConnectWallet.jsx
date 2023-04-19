@@ -1,12 +1,13 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import metamaskLogo from "../assets/icons/metamask.png.png"
 import walletConnect from "../assets/icons/wallet-connect.png"
 import trustWallet from "../assets/icons/trust-wallet.png"
 import {AiOutlineClose} from "react-icons/ai";
 import walletImg from "../assets/icons/wallet.png";
+import { WalletContext } from '../Providers/WallectConnect';
 
 const ConnectWallet = ({toggleModal, modal}) => {
-
+    const { connectToWallet} = useContext(WalletContext);
   
   return (
     <div className={`modal-header ${!modal ? "hidden" : "visible"}`} >  
@@ -25,13 +26,17 @@ const ConnectWallet = ({toggleModal, modal}) => {
                     
             <div className='modal-wallets'>
                 <ul>
-                    <li>
-                        <a href=""><img className='icon-wallets metamask' src={metamaskLogo} alt="logo metamask" /> Metamask</a></li>
-                    <li>
-                        <a href=""><img className='icon-wallets trust-wallet' src={trustWallet} alt="logo trust wallet" /> Trust Wallet</a>
+                    <li onClick={toggleModal}>
+                        <button onClick={()=>connectToWallet()}><img className='icon-wallets metamask' src={metamaskLogo} alt="logo metamask" />Metamask</button>
+                        
                     </li>
-                    <li>
-                        <a href=""><img className='icon-wallets wallet-connect' src={walletConnect} alt="logo wallet connect" /> Wallet Connect</a>
+                    <li onClick={toggleModal}>
+                        <button onClick={()=>connectToWallet()}><img className='icon-wallets trust-wallet' src={trustWallet} alt="logo trust wallet" />Trust Wallet</button>
+                        
+                    </li>
+                    <li onClick={toggleModal}>
+                        <button><img className='icon-wallets wallet-connect' src={walletConnect} alt="logo wallet connect" /> Wallet Connect</button>
+                        
                     </li>
                 </ul>
             </div>

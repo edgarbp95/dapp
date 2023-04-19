@@ -181,13 +181,17 @@ a{
                     width: 150px;
                     border-radius: 5px;
                     height: 100px;
-                    a{
+                    button{
                       display: flex;
                       flex-direction: column;
                       justify-content: center;
                       align-items: center;
+                      background-color: transparent;
                       height: 100%;
+                      border: none;
                       transition: 0.2s linear;
+                      color: white;
+                      width: 100%;
                       &:hover{
                         background-color: var(--blue-t);
                         border-radius: 5px;
@@ -2767,7 +2771,7 @@ a{
   position: absolute;
   // gap: 10px;
   top: 35px;
-  left: -80px;
+  right: 0;
   z-index: 200;
   // width: 150px;
   // height: 0px;
@@ -2776,10 +2780,12 @@ a{
   border-radius: 15px;
   background-color: var(--blue-deg);
   backdrop-filter: blur(30px);
-  width: 200px;
+  width: fit-content;
   height: 100px;
 
-  
+  .span-balance{
+    padding-left: 10px;
+  }
 
   p{
     display: flex;

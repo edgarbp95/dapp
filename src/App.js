@@ -14,7 +14,7 @@ import { loadData, addDataContracts } from './reducers/contractSlice';
 import { useDispatch } from 'react-redux';
 import axios from 'axios';
 import Loading from './Components/Loading';
-import Spoiler from './Components/Spoiler';
+import WallectConnect from './Providers/WallectConnect';
 
 function App() {
   const [modal,setModal] = useState(false)
@@ -77,9 +77,8 @@ function App() {
     }
 
   return (
-    <>
+    <WallectConnect>
       <div className='container-all'>
-          <Spoiler />
           <Menu />
           <ConnectWallet toggleModal={toggleModal} modal={modal}/>
           <div className='container-right'>
@@ -89,12 +88,12 @@ function App() {
                 <Route path="/" element={<Home/>} />
                 <Route path="/vote" element={<Vote />} />
                 <Route path="/collection" element={<Collection />} />
-                <Route path="/earn-strategies/:name" element={<EarnDinamic />} />
+                <Route path="/earn-strategies/:address" element={<EarnDinamic />} />
               </Routes>
             </div>
           </div>
         </div>      
-    </>
+    </WallectConnect>
   );
 }
 

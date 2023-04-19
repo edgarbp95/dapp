@@ -5,11 +5,10 @@ import Table from './Table'
 import usdt from "../assets/icons/usdt.png"
 import {ImQuestion} from "react-icons/im"
 import {BsQuestionLg, BsQuestionSquare} from "react-icons/bs"
-const EarnTemplate = ({namePool,yieldField,strategy,risk,pool,min,max,token,progress}) => {
-
+const EarnTemplate = (props) => {
+    const {address,namePool,yieldField,strategy,risk,pool,min,max,token,progress} =props;
     const [deposit,setDeposit] = useState()
     const amountApproved = 500;
-    const address= "0x8F7Ebc23212F6aDCC7A5f1c86197EC337c2F4997";
     const money= "500,000.00 USDT";
     const bar = useRef()
     const poolSize = parseFloat(pool)
@@ -77,7 +76,7 @@ const EarnTemplate = ({namePool,yieldField,strategy,risk,pool,min,max,token,prog
                     <h4>Min entry: <span>{min} USDT</span></h4>
                     <h4>Max entry: <span>{max} USDT</span></h4>
                     <h4>Token: <span>{token}</span></h4>
-                    <h4 className='pool-address'>Address: <span><a href="">{address}</a></span></h4>
+                    <h4 className='pool-address'>Address: <span><a href={`https://bscscan.com/address/${address}`} target='_blank'>{address}</a></span></h4>
                     <h4>SC Balance: <span>{money}</span></h4>
                 </div>
             </div>

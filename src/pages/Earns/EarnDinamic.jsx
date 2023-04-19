@@ -11,7 +11,7 @@ const EarnDinamic = () => {
     const {data} = useSelector((state)=> state.contract)
 
     const dataContract = data
-    const {name} = useParams()
+    const {address} = useParams()
     
     // useEffect(()=>{
     //   if(dataContract !== ""){
@@ -29,13 +29,13 @@ const EarnDinamic = () => {
     //   }
     // },[name])
 
-    const pool =  Pools.filter(pool=> pool.name == name)
+    const pool =  Pools.filter(pool=> pool.address == address)
 
   return (
     <>
       {/* {dataContract == "" ? <Loading/> :  */}
       <>
-        {pool == "" ? <NotFound/> : <EarnTemplate namePool={pool[0].namePool} yieldField={pool[0].yieldField} strategy={pool[0].strategy} risk={pool[0].risk} pool={pool[0].poolSize} min={pool[0].minEntry} max={pool[0].maxEntry} progress={pool[0].progress} token={pool[0].token}/>}
+        {pool == "" ? <NotFound/> : <EarnTemplate address={pool[0].address} namePool={pool[0].namePool} yieldField={pool[0].yieldField} strategy={pool[0].strategy} risk={pool[0].risk} pool={pool[0].poolSize} min={pool[0].minEntry} max={pool[0].maxEntry} progress={pool[0].progress} token={pool[0].token}/>}
       </>
       {/* } */}
     </>
