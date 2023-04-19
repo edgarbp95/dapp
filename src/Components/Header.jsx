@@ -51,7 +51,7 @@ const Header = ({toggleModal}) => {
             </div>
         </div>
 
-        <div className='wallet-connected'>
+        <div className='wallet-connected hidden'>
           <div onClick={()=>setWalletModal(!walletModal)} className='wallet'>
             <p>{wallet}</p>
             <IoIosArrowDown />
@@ -62,7 +62,7 @@ const Header = ({toggleModal}) => {
           </div>
         </div>
         
-        {/* <Button funct={toggleModal} /> */}
+        <Button funct={toggleModal} />
 
         <div className={`mobile-menu ${animation}`} ref={menuRef} >
             <MenuMobile closeMenu={setMenu} />

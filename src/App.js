@@ -14,6 +14,7 @@ import { loadData, addDataContracts } from './reducers/contractSlice';
 import { useDispatch } from 'react-redux';
 import axios from 'axios';
 import Loading from './Components/Loading';
+import Spoiler from './Components/Spoiler';
 
 function App() {
   const [modal,setModal] = useState(false)
@@ -78,6 +79,7 @@ function App() {
   return (
     <>
       <div className='container-all'>
+          <Spoiler />
           <Menu />
           <ConnectWallet toggleModal={toggleModal} modal={modal}/>
           <div className='container-right'>
