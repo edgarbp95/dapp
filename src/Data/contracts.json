@@ -9,7 +9,8 @@
             "minEntry": "25",
             "maxEntry": "200000",
             "progress": "145000",
-            "token": "USDT"
+            "token": "USDT",
+            "parent":"vispx"
         },
         {
             "address":"0x4C4121CBBFf68C46D49E203c164479B48423064d",
