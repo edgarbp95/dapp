@@ -1,5 +1,4 @@
-{
-    "contracts" : [
+ [
         {
             "namePool": "BeNFT Weekly Earn 4",
             "yieldField": "27%",
@@ -72,5 +71,4 @@
             "progress": "145000",
             "token": "USDT"
         }
-    ]
-}
+]
