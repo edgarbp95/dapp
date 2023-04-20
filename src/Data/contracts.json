@@ -22,6 +22,7 @@
             "minEntry": "25",
             "maxEntry": "200000",
             "progress": "145000",
-            "token": "USDT"
+            "token": "USDT",
+            "parent":"weekly"
         }
 ]

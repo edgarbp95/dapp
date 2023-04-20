@@ -2209,7 +2209,6 @@ a{
     display: flex;
   }
 
-  
 
   .info-risk{
     display: none;
@@ -2250,20 +2249,6 @@ a{
 .not-found{
   height: 90vh;
 }
-
-
-
-// .metamask{
-//   height: 25px;
-// }
-
-// .trust-wallet{
-//   height: 25px;
-// }
-
-// .wallet-connect{
-//   height: 20px;
-// }
 
 
 .loading{
@@ -2743,13 +2728,12 @@ a{
 }
 
 .wallet-connected{
-  display: none;
+  display: flex;
   color: white;
   font-weight: 500;
   gap: 5px;
-  // margin-right: 50px;
   align-items: center;
-  margin-top: 15px;
+  margin-top: 20px;
   position: relative;
   
   .wallet{
@@ -2765,17 +2749,12 @@ a{
 }
 
 .wallet-connected-data{
-  // display: flex;
   flex-direction: column;
   justify-content: center;
   position: absolute;
-  // gap: 10px;
   top: 35px;
   right: 0;
   z-index: 200;
-  // width: 150px;
-  // height: 0px;
-  // padding: 30px 50px;
   padding: 0 20px;
   border-radius: 15px;
   background-color: var(--blue-deg);
