@@ -1,5 +1,5 @@
 import React from 'react'
-import { FaYoutube, FaTelegramPlane, FaTwitter, FaLinkedin, FaMediumM  } from 'react-icons/fa';
+import { FaYoutube, FaTelegramPlane, FaTwitter, FaLinkedin, FaMediumM, FaDiscord  } from 'react-icons/fa';
 import { AiFillInstagram } from 'react-icons/ai';
 
 const Comunity = () => {
@@ -7,6 +7,7 @@ const Comunity = () => {
     <div className='comunity'>
            
             <ul className='comunity-grid'>
+                <li><a href="https://discord.gg/benft" target="_blank"><FaDiscord size={"20px"}/> </a></li>
                 <li><a href="https://www.youtube.com/watch?v=14TT8G_vL0U&ab_channel=BeNFTSolutionsOfficial" target="_blank"><FaYoutube size={"20px"}/></a></li>
                 <li><a href="https://www.instagram.com/benft.solutions/" target="_blank"> <AiFillInstagram  size={"20px"}/></a></li>
                 <li><a href="https://t.me/benftsolutions" target="_blank"> <FaTelegramPlane  size={"20px"}/></a></li>

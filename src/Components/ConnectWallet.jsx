@@ -23,23 +23,7 @@ const ConnectWallet = ({toggleModal, modal}) => {
             </div>
         
             <AiOutlineClose className='close-icon' onClick={toggleModal} size={"25px"} color={"#121312"}/>
-                    
-            <div className='modal-wallets'>
-                <ul>
-                    <li onClick={toggleModal}>
-                        <button onClick={()=>connectToWallet()}><img className='icon-wallets metamask' src={metamaskLogo} alt="logo metamask" />Metamask</button>
-                        
-                    </li>
-                    <li onClick={toggleModal}>
-                        <button onClick={()=>connectToWallet()}><img className='icon-wallets trust-wallet' src={trustWallet} alt="logo trust wallet" />Trust Wallet</button>
-                        
-                    </li>
-                    <li onClick={toggleModal}>
-                        <button><img className='icon-wallets wallet-connect' src={walletConnect} alt="logo wallet connect" /> Wallet Connect</button>
-                        
-                    </li>
-                </ul>
-            </div>
+                
         </div>
 
         

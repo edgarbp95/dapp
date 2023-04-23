@@ -2,62 +2,23 @@ import './assets/App.scss';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { Route,Routes } from 'react-router-dom';
-import { useEffect, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import Home from './pages/Home/Home';
 import Vote from './pages/Vote/Vote';
 import Collection from './pages/Collections/Collection';
 import EarnDinamic from './pages/Earns/EarnDinamic';
 import Menu from './Components/Menu';
 import Header from './Components/Header';
-import ConnectWallet from './Components/ConnectWallet';
-import { loadData, addDataContracts } from './reducers/contractSlice';
-import { useDispatch } from 'react-redux';
-import axios from 'axios';
-import Loading from './Components/Loading';
-import WallectConnect from './Providers/WallectConnect';
+import Login from './pages/Login/Login';
+import WallectConnect, { WalletContext } from './Providers/WallectConnect';
 
 function App() {
   const [modal,setModal] = useState(false)
-  const dispatch = useDispatch()
-  const [isLoading, setIsLoading] = useState(true);
+
+  const {address} = useContext(WalletContext);
 
   useEffect(()=>{
     AOS.init()
-  },[])
-
-  async function loadData() {
-    try {
-      const response = await axios.get('http://localhost:5000/contracts');
-      const data = response.data;
-      dispatch(addDataContracts(data))
-     
-    } catch (error) {
-      console.error(error);
-    }
-  }
-  
-  useEffect(()=>{
-
-    // axios.get('http://localhost:5000/contracts')
-    // .then(response => {
-    //   dispatch(addDataContracts(response.data))
-    // })
-    // .catch(error => {
-    //   console.error(error);
-    // });
-
-    loadData()
-
-    const handleLoad = () => {
-      setIsLoading(false);
-    };
-
-    window.addEventListener("load", handleLoad);
-
-    return () => {
-      window.removeEventListener("load", handleLoad);
-    };
-
   },[])
 
   function disableScroll() {
@@ -76,22 +37,29 @@ function App() {
     }
     }
 
+    const [isAllowed,setIsAllowed] = useState(null)
+
   return (
     <WallectConnect>
       <div className='container-all'>
-          <Menu />
-          <ConnectWallet toggleModal={toggleModal} modal={modal}/>
-          <div className='container-right'>
-            <Header toggleModal={toggleModal} />
-            <div className='container-routes'>
-              <Routes>
-                <Route path="/" element={<Home/>} />
-                <Route path="/vote" element={<Vote />} />
-                <Route path="/collection" element={<Collection />} />
-                <Route path="/earn-strategies/:address" element={<EarnDinamic />} />
-              </Routes>
+          {
+            !isAllowed ? <Login isAllowed={isAllowed} setIsAllowed={setIsAllowed}/> : 
+            <>
+            <Menu />
+            <div className='container-right'>
+              <Header toggleModal={toggleModal} />
+              <div className='container-routes'>
+                <Routes>
+                  <Route path="/" element={<Home/>} />
+                  <Route path="/vote" element={<Vote />} />
+                  <Route path="/collection" element={<Collection />} />
+                  <Route path="/earn-strategies/:address" element={<EarnDinamic />} />
+                </Routes>
+              </div>
             </div>
-          </div>
+            </>
+          }
+          
         </div>      
     </WallectConnect>
   );
